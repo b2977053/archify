@@ -24,8 +24,8 @@ resolved semantic relationships + final visible path primitives + typed frames
   -> CLI, check-render-output, Gallery, tests read the same receipt contract
 ```
 
-The receipt is more valuable than another visual control. It converts “this
-looks busy” into a stable author repair loop, makes Gallery proof honest, and
+The receipt is more valuable than another visual control. It converts 「this
+looks busy」 into a stable author repair loop, makes Gallery proof honest, and
 lets Archify tighten polished examples without rejecting legitimate engineering
 topologies.
 
@@ -231,7 +231,7 @@ bridge decoration.
 ### Skip
 
 - Zero crossings as the default correctness contract.
-- “Every overlap is invalid.”
+- 「Every overlap is invalid.」
 - A universal total-bends budget or cross-topology 0–100 score.
 - Coordinate-inferred junctions, bridges, or shared ports.
 - Pixel screenshot diffs as the source of geometry truth.
@@ -410,9 +410,9 @@ Do not expand `layout-report.mjs` by copying five renderer-specific object
 serializers in this slice. Keep layout inspection and composition receipts
 separate:
 
-- layout report answers “where did the renderer place things?”;
-- composition receipt answers “what quality signals does the final visible
-  composition contain?”
+- layout report answers 「where did the renderer place things?」;
+- composition receipt answers 「what quality signals does the final visible
+  composition contain?」
 
 They can share route-record types later. This avoids making architecture's
 current inspect schema a de facto contract for sequence and lifecycle.

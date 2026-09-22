@@ -2,7 +2,7 @@
 
 ## Reader problem
 
-Relationship Lens made edge names and directions readable, but it still left a high-degree-node reader to visually match a text row with one of several nearby paths. The panel answered “what is this relationship called?” without instantly answering “which exact line is it?”
+Relationship Lens made edge names and directions readable, but it still left a high-degree-node reader to visually match a text row with one of several nearby paths. The panel answered 「what is this relationship called?」 without instantly answering 「which exact line is it?」
 
 ## Patterns worth borrowing
 

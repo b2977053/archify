@@ -21,7 +21,7 @@ The next best move after Signal Flow and WebM is a stable-ID refinement and
 focus contract: agents edit the typed IR by semantic ID while preserving
 untouched identity, and readers click or keyboard-focus a node, dim unrelated
 elements, expose its immediate relationships, and create a shareable deep link.
-This adds the “large diagrams are safely refinable and explorable” benefit
+This adds the 「large diagrams are safely refinable and explorable」 benefit
 associated with graph canvases without turning Archify into one.
 
 ## Round 2 implementation status
@@ -181,7 +181,7 @@ What it proves:
   and selectors, styled from data, and operated headlessly or interactively
   ([official API](https://js.cytoscape.org/)).
 - `cy.center(collection)`, `cy.fit(collection)`, graph traversals, selectors,
-  classes, and graph events form a compact “focus this neighbourhood” model.
+  classes, and graph events form a compact 「focus this neighbourhood」 model.
   Pinch zoom, box selection, pan, tap selection, and animated viewport changes
   are all first-class but independently switchable
   ([viewport, events, traversal, and style API](https://js.cytoscape.org/)).
@@ -319,7 +319,7 @@ What it proves:
 - Node click/link behaviour is gated by an explicit security level, with
   `strict` disabling click functionality and `sandbox` isolating rendering
   ([usage and security levels](https://github.com/mermaid-js/mermaid/blob/develop/docs/config/usage.md)).
-- Mermaid is embeddable through ESM/CDN and offers a smaller “tiny” build, but
+- Mermaid is embeddable through ESM/CDN and offers a smaller 「tiny」 build, but
   the full package has a broad runtime dependency graph. Archify should copy
   its contracts, not embed it
   ([usage guide](https://github.com/mermaid-js/mermaid/blob/develop/docs/config/usage.md),
@@ -451,11 +451,11 @@ Contract:
 - selected node, incoming/outgoing edges, and immediate neighbours stay at full
   prominence while unrelated content dims;
 - update the URL with `#node=<encoded-id>` and restore focus on reload;
-- `Escape` or a “Show all” control resets focus;
+- `Escape` or a 「Show all」 control resets focus;
 - announce the selected label and relationship counts through a polite live
   region; preserve visible keyboard focus and reduced-motion behaviour;
 - export continues to serialize the canonical full diagram, not temporary
-  viewer state, unless an explicit “export focused view” is added later.
+  viewer state, unless an explicit 「export focused view」 is added later.
 
 Why this ranks first: it combines React Flow's accessible focus, Cytoscape's
 neighbour semantics, and D2's linked navigation while remaining vanilla SVG/JS
@@ -535,7 +535,7 @@ Rules:
 - viewer controls can step through views, deep-link to one, and optionally
   record the sequence using the existing browser-native motion path;
 - cap the initial contract at five views to avoid D2's documented
-  “too many boards confuse viewers” failure mode.
+  「too many boards confuse viewers」 failure mode.
 
 Why this ranks third: it turns animation into explanation and enables D2-like
 scenarios without introducing multiple mutable diagrams. The risk is schema and

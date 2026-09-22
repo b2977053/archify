@@ -75,12 +75,12 @@ test('English and Chinese docs cover install, invoke, uninstall, community wordi
   assert.match(english, /exact workspace paths/);
   assert.match(english, /no telemetry/i);
 
-  assert.match(chinese, /社区集成/);
-  assert.match(chinese, /开发者预览/);
+  assert.match(chinese, /社區集成/);
+  assert.match(chinese, /開發者預覽/);
   assert.match(chinese, /不是 DeepSeek 官方/);
   assert.match(chinese, /Produced Files/);
-  assert.match(chinese, /精确工作区路径/);
-  assert.match(chinese, /遥测/);
+  assert.match(chinese, /精確工作區路徑/);
+  assert.match(chinese, /遙測/);
 });
 
 test('Skills CLI, Cursor, Codex, Claude Code, OpenCode, and Raven remain the default main path', () => {
@@ -89,7 +89,7 @@ test('Skills CLI, Cursor, Codex, Claude Code, OpenCode, and Raven remain the def
   assert.match(english, /^```bash\nnpx skills add tt-a1i\/archify -g\n```$/m);
   assert.match(chinese, /^```bash\nnpx skills add tt-a1i\/archify -g\n```$/m);
   assert.match(english, /## Quick start/);
-  assert.match(chinese, /## 快速开始/);
+  assert.match(chinese, /## 快速開始/);
   const dshEnglishIndex = english.indexOf('DeepSeek Harness');
   const quickStartIndex = english.indexOf('## Quick start');
   assert.ok(dshEnglishIndex > quickStartIndex, 'DSH docs must not precede the default quick start');

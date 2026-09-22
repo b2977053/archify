@@ -15,10 +15,10 @@ export const DIAGRAM_TYPE_LABELS = Object.freeze({
     lifecycle: 'Lifecycle',
   }),
   zh: Object.freeze({
-    architecture: '架构图',
+    architecture: '架構圖',
     workflow: '工作流',
-    sequence: '时序图',
-    dataflow: '数据流',
+    sequence: '時序圖',
+    dataflow: '數據流',
     lifecycle: '生命周期',
   }),
 });

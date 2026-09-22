@@ -10,7 +10,7 @@ Archify already has the right substrate: one canonical SVG, stable semantic node
 IDs, Named Chapter Rail, Story Beats, a bounded Semantic Camera, and the Round 29
 Motion Governor. The missing quality is continuity between chapters. Today a
 chapter activation replaces focus/trail state and asks the camera to fit the new
-nodes, but the reader receives no truthful visual answer to “what persisted?”;
+nodes, but the reader receives no truthful visual answer to 「what persisted?」;
 rapid retargeting can also remove the CSS transition before rebasing from the
 currently rendered transform, producing a snap.
 

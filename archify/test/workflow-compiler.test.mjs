@@ -758,8 +758,8 @@ test('readable-v2 measures asymmetric custom widths and CJK edge labels', () => 
   const cases = [
     { widths: [32, 92], label: '同步', nodeLabels: ['甲', '乙'] },
     { widths: [102, 124], label: '資料 ready', nodeLabels: ['入口', '出口'] },
-    { widths: [132, 160], label: '审批通过', nodeLabels: ['请求', '执行'] },
-    { widths: [92, 240], label: '结果 ✅ 回传', nodeLabels: ['工具', '外部服务'] },
+    { widths: [132, 160], label: '審批通過', nodeLabels: ['請求', '執行'] },
+    { widths: [92, 240], label: '結果 ✅ 回傳', nodeLabels: ['工具', '外部服務'] },
   ];
 
   for (const current of cases) {

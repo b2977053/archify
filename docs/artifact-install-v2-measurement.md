@@ -34,7 +34,7 @@ Count at most one occurrence of each step per browser session when reporting con
 
 ## What this does not prove
 
-**First-diagram success is not observable from this static page.** A successful copy is an intent signal, not proof that installation completed, the agent generated a candidate, validation passed, or the user retained Archify. Do not label these ratios “activation,” “success,” or “retention.”
+**First-diagram success is not observable from this static page.** A successful copy is an intent signal, not proof that installation completed, the agent generated a candidate, validation passed, or the user retained Archify. Do not label these ratios 「activation,」 「success,」 or 「retention.」
 
 The Ordinary-Model Floor benchmark measures candidate quality independently. A future end-to-end activation metric would require an explicit, privacy-reviewed receipt boundary at the installed CLI or a voluntary user submission; it must not be inferred from Start-page clicks.
 

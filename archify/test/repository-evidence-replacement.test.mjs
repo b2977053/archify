@@ -26,7 +26,7 @@ function fixture(t, scenario) {
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));
   const repo = path.join(root, 'repo');
   fs.mkdirSync(repo);
-  // 隔离调用者的 Git 环境与配置，不改动真实 HOME 或全局配置。
+  // 隔離調用者的 Git 環境與配置，不改動真實 HOME 或全局配置。
   const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.startsWith('GIT_')));
   Object.assign(env, {
     GIT_CONFIG_NOSYSTEM: '1',
@@ -79,7 +79,7 @@ function fixture(t, scenario) {
     git('replace', replaced, replacement);
     const ref = `${scenario.refBase || 'refs/replace/'}${replaced}`;
     assert.equal(git('rev-parse', ref), replacement);
-    // 证明夹具确实改变 Git 读取结果，而非只创建无效的 replacement ref。
+    // 證明夾具確實改變 Git 讀取結果，而非只創建無效的 replacement ref。
     if (scenario.replacement === null) {
       assert.throws(() => git('show', `${revision}:source.js`));
     } else {

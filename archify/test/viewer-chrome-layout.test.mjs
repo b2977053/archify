@@ -724,11 +724,11 @@ test('localized multiline Legends remain clear across required viewports, themes
       text.textContent = '';
       var first = document.createElementNS(namespace, 'tspan');
       first.setAttribute('x', x);
-      first.textContent = '应用与运行时编排服务（本地化长标签）';
+      first.textContent = '應用與運行時編排服務（本地化長標籤）';
       var second = document.createElementNS(namespace, 'tspan');
       second.setAttribute('x', x);
       second.setAttribute('dy', '14');
-      second.textContent = '第二行语义说明';
+      second.textContent = '第二行語義說明';
       text.appendChild(first);
       text.appendChild(second);
     })()`);

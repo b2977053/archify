@@ -61,7 +61,7 @@ This note uses:
 4. explicit product inferences where a source supplies a primitive rather than
    an Archify-specific recommendation.
 
-No external source claims that a particular interaction is “beautiful.” In this
+No external source claims that a particular interaction is 「beautiful.」 In this
 report, first-impression beauty means a calm, intentional visual hierarchy:
 important content is large enough to read, unrelated content remains stable
 context, and motion explains one semantic change rather than decorating the
@@ -98,7 +98,7 @@ All 11 current Proof Lab sources have three authored views: 33 chapters total.
 Across those artifacts, the first authored chapter contains 52 of 112 semantic
 nodes, with a mean artifact-level share of 47%. This demonstrates that authors
 already provide useful bounded subsets, but it does **not** prove that array
-position means “default opening.” Archify should not infer cold-open intent from
+position means 「default opening.」 Archify should not infer cold-open intent from
 the first array item.
 
 Within a selected chapter, Story Trail already derives ordered stable IDs,

@@ -370,12 +370,12 @@ test('measured legend rows share baselines and stay within the viewBox for local
   const doc = withLegend('lifecycle', {
     mode: 'all',
     entries: {
-      start: { label: '开始 / Start of the complete lifecycle' },
-      active: { label: '正在执行 active processing' },
-      waiting: { label: '等待人工输入' },
+      start: { label: '開始 / Start of the complete lifecycle' },
+      active: { label: '正在執行 active processing' },
+      waiting: { label: '等待人工輸入' },
       decision: { label: 'Decision gate with deterministic wrapping' },
       success: { label: '成功完成' },
-      failure: { label: 'Failure / 失败' },
+      failure: { label: 'Failure / 失敗' },
       neutral: { label: 'Neutral state' },
       external: { label: 'External system' },
     },

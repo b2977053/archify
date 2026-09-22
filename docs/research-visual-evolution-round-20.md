@@ -5,8 +5,8 @@ Research date: 2026-07-19 (Asia/Shanghai)
 
 Archify already supports authored Story Trails, one-hop Intent Trace, durable
 node focus, relationship inspection, search, and overview navigation. Those
-surfaces answer “what is this?”, “what touches it?”, and “what story did the
-author prepare?” They do not answer an unplanned reader question that appears
+surfaces answer 「what is this?」, 「what touches it?」, and 「what story did the
+author prepare?」 They do not answer an unplanned reader question that appears
 constantly in architecture review: **what exact directed route connects this
 component to that one?**
 
@@ -23,7 +23,7 @@ component to that one?**
   highlighting a set of connected nodes.
 - [Graphology's shortest-path package](https://graphology.github.io/standard-library/shortest-path.html)
   exposes an unweighted shortest path and returns `null` when no path exists.
-  Archify has no authored costs, so “fewest real relationship hops” is a more
+  Archify has no authored costs, so 「fewest real relationship hops」 is a more
   honest contract than inventing weights from screen distance or color.
 - [yFiles shortest-path documentation](https://docs.yworks.com/yfiles-html/api/ShortestPath/)
   separates graph analysis from the visual highlight applied to the result and

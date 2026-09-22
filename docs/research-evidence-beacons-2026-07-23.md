@@ -5,8 +5,8 @@ Decision: make already-verified repository evidence visible on the canvas; add n
 
 ## Current signal from adjacent projects
 
-- Understand Anything makes each file/function/class node clickable and pairs selection with code, relationships, and explanation. Its own positioning is “graphs that teach,” not complexity for its own sake ([README at `6ae7187`](https://github.com/Egonex-AI/Understand-Anything/blob/6ae71878beb50226a1e4b7e2f52ac6468c86f74b/README.md#L51-L80)).
-- CodeVisualizer gives “click nodes to navigate to code” first-class placement alongside pan, zoom, and local parsing ([README at `5b100b8`](https://github.com/DucPhamNgoc08/CodeVisualizer/blob/5b100b847ec9a86ac07129f7f6ed1a9deafc9ecc/README.md#L96-L119)).
+- Understand Anything makes each file/function/class node clickable and pairs selection with code, relationships, and explanation. Its own positioning is 「graphs that teach,」 not complexity for its own sake ([README at `6ae7187`](https://github.com/Egonex-AI/Understand-Anything/blob/6ae71878beb50226a1e4b7e2f52ac6468c86f74b/README.md#L51-L80)).
+- CodeVisualizer gives 「click nodes to navigate to code」 first-class placement alongside pan, zoom, and local parsing ([README at `5b100b8`](https://github.com/DucPhamNgoc08/CodeVisualizer/blob/5b100b847ec9a86ac07129f7f6ed1a9deafc9ecc/README.md#L96-L119)).
 - Fireworks Tech Graph continues to win attention through broad visual formats, validated semantic motion, offline HTML, and geometry checks ([README at `50c819d`](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/README.md#L136-L153)). Archify should keep that artifact-level rigor while differentiating through trustworthy code evidence.
 
 ## The gap after Repository Evidence Passport

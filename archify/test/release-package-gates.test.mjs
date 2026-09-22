@@ -160,10 +160,10 @@ test('release docs disclose that mutable Release assets are verified only at dep
     path.join(repoRoot, 'docs', 'skill-embedded-optional-update-notifier-design.md'),
     'utf8',
   );
-  assert.match(design, /部署时点/);
-  assert.match(design, /部署后替换[^。]*不会自动触发复验/);
+  assert.match(design, /部署時點/);
+  assert.match(design, /部署後替換[^。]*不會自動觸發復驗/);
   assert.match(design, /immutable release/i);
-  assert.doesNotMatch(design, /即使 Release 资产后来可被替换，也不能脱离/);
+  assert.doesNotMatch(design, /即使 Release 資產後來可被替換，也不能脫離/);
 });
 
 test('GitHub Pages deploys the verified website artifact only after every repository gate succeeds', () => {

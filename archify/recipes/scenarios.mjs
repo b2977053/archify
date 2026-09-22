@@ -4,9 +4,9 @@ const RAW_RECIPES = [
     presentation: { preset: 'classic', motion: 'static', views: 'optional' },
     start: {
       en: { descriptionPrompt: 'Use Archify to turn this plain-language system description into a high-level architecture diagram: [describe the users, core components, primary path, external dependencies, and boundaries]. No repository is required. Ask only for missing facts that would materially change the diagram, mark any remaining unknowns instead of inventing them, and keep one obvious primary path across 8–12 core components.' },
-      zh: { descriptionPrompt: '用 Archify 把下面这段自然语言系统描述画成高层架构图：[在这里描述用户、核心组件、主要路径、外部依赖和边界]。不需要代码库。只追问会实质影响图的缺失信息，其余不确定内容要标明而不是编造；保留 8–12 个核心组件和一条一眼可见的主路径。' },
+      zh: { descriptionPrompt: '用 Archify 把下面這段自然語言系統描述畫成高層架構圖：[在這裡描述用戶、核心組件、主要路徑、外部依賴和邊界]。不需要代碼庫。只追問會實質影響圖的缺失信息，其餘不確定內容要標明而不是編造；保留 8–12 個核心組件和一條一眼可見的主路徑。' },
     },
-    signals: [['system overview', 12], ['architecture', 10], ['components', 6], ['services', 4], ['repository', 5], ['trust boundary', 8], ['架构', 10], ['系统总览', 12], ['组件', 6], ['服务', 4], ['仓库', 5], ['信任边界', 8]],
+    signals: [['system overview', 12], ['architecture', 10], ['components', 6], ['services', 4], ['repository', 5], ['trust boundary', 8], ['架構', 10], ['系統總覽', 12], ['組件', 6], ['服務', 4], ['倉庫', 5], ['信任邊界', 8]],
     en: {
       title: 'System overview', question: 'What exists, who owns it, and how is it connected?',
       summary: 'A bounded map of core components, external dependencies, primary paths, and trust boundaries.',
@@ -16,18 +16,18 @@ const RAW_RECIPES = [
       prompt: 'Analyze this repository, then use Archify to create a high-level architecture diagram. Show 8–12 core runtime components, one primary request or data path, external dependencies, ownership or trust boundaries, and put supporting detail in cards instead of adding more edges.',
     },
     zh: {
-      title: '系统总览', question: '系统里有什么、归谁负责、彼此如何连接？',
-      summary: '用一张有边界的图展示核心组件、外部依赖、主路径和信任边界。',
-      useWhen: '适合新人上手、方案评审、仓库梳理和服务全景说明。',
-      avoidWhen: '如果重点是精确调用顺序、状态流转或字段级血缘，请换其他配方。',
-      include: ['8–12 个核心组件', '一条主路径', '外部依赖', '归属或信任边界'],
-      prompt: '分析这个仓库，然后用 Archify 生成高层系统架构图。展示 8–12 个核心运行时组件、一条主要请求或数据路径、外部依赖、归属或信任边界；支持性细节放进卡片，不要继续堆连线。',
+      title: '系統總覽', question: '系統裡有什麼、歸誰負責、彼此如何連接？',
+      summary: '用一張有邊界的圖展示核心組件、外部依賴、主路徑和信任邊界。',
+      useWhen: '適合新人上手、方案評審、倉庫梳理和服務全景說明。',
+      avoidWhen: '如果重點是精確調用順序、狀態流轉或欄位級血緣，請換其他配方。',
+      include: ['8–12 個核心組件', '一條主路徑', '外部依賴', '歸屬或信任邊界'],
+      prompt: '分析這個倉庫，然後用 Archify 生成高層系統架構圖。展示 8–12 個核心運行時組件、一條主要請求或數據路徑、外部依賴、歸屬或信任邊界；支持性細節放進卡片，不要繼續堆連線。',
     },
   },
   {
     id: 'deployment-ownership', type: 'architecture', proof: 'deployment-ownership',
     presentation: { preset: 'blueprint', motion: 'trace', views: 'recommended' },
-    signals: [['deployment topology', 14], ['region', 7], ['vpc', 9], ['cluster', 6], ['availability zone', 8], ['ownership', 7], ['cloud deployment', 12], ['部署拓扑', 14], ['区域', 6], ['集群', 6], ['可用区', 8], ['资源归属', 9], ['跨区', 8]],
+    signals: [['deployment topology', 14], ['region', 7], ['vpc', 9], ['cluster', 6], ['availability zone', 8], ['ownership', 7], ['cloud deployment', 12], ['部署拓撲', 14], ['區域', 6], ['集群', 6], ['可用區', 8], ['資源歸屬', 9], ['跨區', 8]],
     en: {
       title: 'Deployment ownership', question: 'Where does each workload run, and what crosses a boundary?',
       summary: 'A deployment-focused map of regions, networks, clusters, workloads, stores, and cross-boundary mechanisms.',
@@ -37,12 +37,12 @@ const RAW_RECIPES = [
       prompt: 'Use Archify to draw the production deployment topology. Group resources by region, network, cluster, and owner; show workloads and stateful services; label every cross-boundary mechanism. Do not invent deployment facts—mark unknown areas explicitly. If the user wants a fail-closed deployment review, ask before setting meta.engineering_profile to deployment-ownership; otherwise leave the engineering profile unset.',
     },
     zh: {
-      title: '部署与归属', question: '每个工作负载运行在哪里，哪些连接跨越了边界？',
-      summary: '围绕 Region、网络、集群、工作负载、存储和跨边界机制组织部署图。',
-      useWhen: '适合云上评审、生产就绪、多区域规划和基础设施交接。',
-      avoidWhen: '部署事实不清楚，或真正问题是应用行为而不是资源位置时不要使用。',
-      include: ['区域与网络', '工作负载归属', '有状态服务', '明确的跨边界机制'],
-      prompt: '用 Archify 绘制生产部署拓扑。按区域、网络、集群和负责人分组，展示工作负载与有状态服务，并标注每一种跨边界机制。不要编造部署事实，不确定的区域要明确标出。如果用户需要失败即阻断的部署评审，先征得确认，再把 meta.engineering_profile 设为 deployment-ownership；否则不要启用工程画像。',
+      title: '部署與歸屬', question: '每個工作負載運行在哪裡，哪些連接跨越了邊界？',
+      summary: '圍繞 Region、網絡、集群、工作負載、存儲和跨邊界機制組織部署圖。',
+      useWhen: '適合雲上評審、生產就緒、多區域規劃和基礎設施交接。',
+      avoidWhen: '部署事實不清楚，或真正問題是應用行為而不是資源位置時不要使用。',
+      include: ['區域與網絡', '工作負載歸屬', '有狀態服務', '明確的跨邊界機制'],
+      prompt: '用 Archify 繪製生產部署拓撲。按區域、網絡、集群和負責人分組，展示工作負載與有狀態服務，並標註每一種跨邊界機制。不要編造部署事實，不確定的區域要明確標出。如果用戶需要失敗即阻斷的部署評審，先徵得確認，再把 meta.engineering_profile 設為 deployment-ownership；否則不要啟用工程畫像。',
     },
   },
   {
@@ -50,9 +50,9 @@ const RAW_RECIPES = [
     presentation: { preset: 'signal-flow', motion: 'trace', views: 'recommended' },
     start: {
       en: { descriptionPrompt: 'Use Archify workflow mode to turn this description into a diagram: [paste the actors, main steps, decisions, approvals, and exception paths]. Use lanes for distinct owners, keep one unmistakable happy path, and mark missing ownership or unresolved branches instead of inventing them.' },
-      zh: { descriptionPrompt: '用 Archify 工作流模式把下面的描述画成图：[粘贴参与者、主要步骤、决策、审批和异常路径]。不同负责方使用独立泳道，保留一条明确的成功主路径，缺失的负责人或未定分支要标明而不是编造。' },
+      zh: { descriptionPrompt: '用 Archify 工作流模式把下面的描述畫成圖：[粘貼參與者、主要步驟、決策、審批和異常路徑]。不同負責方使用獨立泳道，保留一條明確的成功主路徑，缺失的負責人或未定分支要標明而不是編造。' },
     },
-    signals: [['agent tool call', 16], ['tool call', 12], ['approval gate', 10], ['human in the loop', 9], ['mcp', 7], ['planner', 6], ['agent loop', 10], ['智能体工具调用', 16], ['工具调用', 12], ['审批门', 10], ['人在回路', 9], ['规划器', 6], ['智能体循环', 10]],
+    signals: [['agent tool call', 16], ['tool call', 12], ['approval gate', 10], ['human in the loop', 9], ['mcp', 7], ['planner', 6], ['agent loop', 10], ['智能體工具調用', 16], ['工具調用', 12], ['審批門', 10], ['人在迴路', 9], ['規劃器', 6], ['智能體循環', 10]],
     en: {
       title: 'Agent tool-call loop', question: 'How does an agent plan, get permission, act, recover, and report?',
       summary: 'A lane-based agent loop with policy gates, tool execution, exception recovery, evidence, and final response.',
@@ -62,18 +62,18 @@ const RAW_RECIPES = [
       prompt: 'Use Archify workflow mode to explain this agent tool-call loop. Separate user surface, agent runtime, policy boundary, exception handling, tool execution, and observability into lanes. Make the successful path primary and show approval, retry, blocked, and evidence paths explicitly.',
     },
     zh: {
-      title: '智能体工具调用', question: '智能体如何规划、获批、执行、恢复并汇报？',
-      summary: '用泳道表达策略门、工具执行、异常恢复、证据和最终回复。',
-      useWhen: '适合解释 Agent Runtime、MCP/工具编排、审批、重试和可观测性。',
-      avoidWhen: '如果只想看静态组件，或重点是精确 API 消息时序，请换其他配方。',
-      include: ['请求与规划', '策略或审批门', '工具执行', '异常与证据路径'],
-      prompt: '用 Archify 工作流模式解释这段智能体工具调用。把用户界面、Agent Runtime、策略边界、异常处理、工具执行和可观测性分成泳道；突出成功主路径，并明确展示审批、重试、阻塞和证据路径。',
+      title: '智能體工具調用', question: '智能體如何規劃、獲批、執行、恢復並匯報？',
+      summary: '用泳道表達策略門、工具執行、異常恢復、證據和最終回復。',
+      useWhen: '適合解釋 Agent Runtime、MCP/工具編排、審批、重試和可觀測性。',
+      avoidWhen: '如果只想看靜態組件，或重點是精確 API 消息時序，請換其他配方。',
+      include: ['請求與規劃', '策略或審批門', '工具執行', '異常與證據路徑'],
+      prompt: '用 Archify 工作流模式解釋這段智能體工具調用。把用戶界面、Agent Runtime、策略邊界、異常處理、工具執行和可觀測性分成泳道；突出成功主路徑，並明確展示審批、重試、阻塞和證據路徑。',
     },
   },
   {
     id: 'delivery-workflow', type: 'workflow', proof: 'delivery-workflow',
     presentation: { preset: 'classic', motion: 'trace', views: 'optional' },
-    signals: [['ci/cd', 14], ['release workflow', 14], ['deployment pipeline', 11], ['pull request', 7], ['staging', 7], ['rollback', 8], ['发布流程', 14], ['流水线', 9], ['上线', 7], ['预发', 7], ['回滚', 8], ['审批发布', 10]],
+    signals: [['ci/cd', 14], ['release workflow', 14], ['deployment pipeline', 11], ['pull request', 7], ['staging', 7], ['rollback', 8], ['發布流程', 14], ['流水線', 9], ['上線', 7], ['預發', 7], ['回滾', 8], ['審批發布', 10]],
     en: {
       title: 'Delivery workflow', question: 'How does a change move safely from commit to production?',
       summary: 'A delivery flow with build, checks, environments, approvals, smoke tests, rollback, and ownership lanes.',
@@ -83,18 +83,18 @@ const RAW_RECIPES = [
       prompt: 'Use Archify workflow mode to draw this delivery process from commit to production. Separate developer, CI, approval, environment, and exception lanes; mark blocking checks, smoke tests, ownership, and the rollback path. Keep one unmistakable happy path.',
     },
     zh: {
-      title: '研发交付流程', question: '一次变更如何安全地从提交走到生产？',
-      summary: '展示构建、检查、环境、审批、冒烟、回滚和负责人泳道。',
-      useWhen: '适合 CI/CD 设计、发布评审、部署治理和研发新人上手。',
-      avoidWhen: '如果重点是基础设施位置或部署对象的状态集合，请换架构图或生命周期图。',
-      include: ['触发与构建', '阻断检查', '审批与环境', '回滚与验证'],
-      prompt: '用 Archify 工作流模式绘制从代码提交到生产发布的流程。拆分开发者、CI、审批、环境和异常泳道；标出阻断检查、冒烟测试、负责人和回滚路径，并保留一条一眼可见的成功主路径。',
+      title: '研發交付流程', question: '一次變更如何安全地從提交走到生產？',
+      summary: '展示構建、檢查、環境、審批、冒煙、回滾和負責人泳道。',
+      useWhen: '適合 CI/CD 設計、發布評審、部署治理和研發新人上手。',
+      avoidWhen: '如果重點是基礎設施位置或部署對象的狀態集合，請換架構圖或生命周期圖。',
+      include: ['觸發與構建', '阻斷檢查', '審批與環境', '回滾與驗證'],
+      prompt: '用 Archify 工作流模式繪製從代碼提交到生產發布的流程。拆分開發者、CI、審批、環境和異常泳道；標出阻斷檢查、冒煙測試、負責人和回滾路徑，並保留一條一眼可見的成功主路徑。',
     },
   },
   {
     id: 'incident-runbook', type: 'workflow', proof: 'incident-runbook',
     presentation: { preset: 'signal-flow', motion: 'trace', views: 'recommended' },
-    signals: [['incident response', 15], ['runbook', 12], ['outage', 9], ['triage', 8], ['mitigation', 8], ['escalation', 7], ['事故处置', 15], ['故障', 9], ['应急预案', 12], ['排障', 9], ['缓解', 7], ['升级响应', 8]],
+    signals: [['incident response', 15], ['runbook', 12], ['outage', 9], ['triage', 8], ['mitigation', 8], ['escalation', 7], ['事故處置', 15], ['故障', 9], ['應急預案', 12], ['排障', 9], ['緩解', 7], ['升級響應', 8]],
     en: {
       title: 'Incident runbook', question: 'How do responders detect, triage, mitigate, verify, and escalate?',
       summary: 'An operational workflow that separates signals, responders, mitigation, communications, and recovery proof.',
@@ -104,12 +104,12 @@ const RAW_RECIPES = [
       prompt: 'Use Archify workflow mode to turn this incident runbook into responder lanes. Show detection, triage, mitigation, escalation, communication, rollback, and recovery verification. Separate decision gates from actions and make missing ownership visible.',
     },
     zh: {
-      title: '事故处置 Runbook', question: '响应者如何发现、分诊、缓解、验证并升级？',
-      summary: '把信号、响应者、缓解动作、沟通和恢复证据拆成可执行流程。',
-      useWhen: '适合故障预案、On-call 交接、稳定性评审和桌面演练。',
-      avoidWhen: '如果受众需要实时指标仪表盘或事故后的组件拓扑，而不是响应动作，请换其他视图。',
-      include: ['发现信号', '分诊负责人', '缓解与回滚', '恢复验证与沟通'],
-      prompt: '用 Archify 工作流模式把事故处置预案画成响应者泳道。展示发现、分诊、缓解、升级、沟通、回滚和恢复验证；把决策门与操作分开，并让缺失的负责人清晰可见。',
+      title: '事故處置 Runbook', question: '響應者如何發現、分診、緩解、驗證並升級？',
+      summary: '把信號、響應者、緩解動作、溝通和恢復證據拆成可執行流程。',
+      useWhen: '適合故障預案、On-call 交接、穩定性評審和桌面演練。',
+      avoidWhen: '如果受眾需要實時指標儀錶盤或事故後的組件拓撲，而不是響應動作，請換其他視圖。',
+      include: ['發現信號', '分診負責人', '緩解與回滾', '恢復驗證與溝通'],
+      prompt: '用 Archify 工作流模式把事故處置預案畫成響應者泳道。展示發現、分診、緩解、升級、溝通、回滾和恢復驗證；把決策門與操作分開，並讓缺失的負責人清晰可見。',
     },
   },
   {
@@ -117,9 +117,9 @@ const RAW_RECIPES = [
     presentation: { preset: 'classic', motion: 'trace', views: 'optional' },
     start: {
       en: { descriptionPrompt: 'Use Archify sequence mode to draw this interaction: [paste the participants, calls, returns, fallback, and asynchronous side effects]. Keep message order unambiguous, labels short, and unknown behavior explicit. No repository is required.' },
-      zh: { descriptionPrompt: '用 Archify 时序模式绘制下面的交互：[粘贴参与者、调用、返回、回退和异步副作用]。确保消息顺序无歧义、标签简短，并明确标注未知行为。不需要代码库。' },
+      zh: { descriptionPrompt: '用 Archify 時序模式繪製下面的交互：[粘貼參與者、調用、返回、回退和異步副作用]。確保消息順序無歧義、標籤簡短，並明確標註未知行為。不需要代碼庫。' },
     },
-    signals: [['api request', 14], ['request response', 12], ['call chain', 11], ['cache miss', 13], ['jwt', 8], ['who calls whom', 12], ['api 请求', 14], ['请求响应', 12], ['调用链', 11], ['缓存未命中', 13], ['谁调用谁', 12], ['鉴权链路', 9]],
+    signals: [['api request', 14], ['request response', 12], ['call chain', 11], ['cache miss', 13], ['jwt', 8], ['who calls whom', 12], ['api 請求', 14], ['請求響應', 12], ['調用鏈', 11], ['緩存未命中', 13], ['誰調用誰', 12], ['鑑權鏈路', 9]],
     en: {
       title: 'API request chain', question: 'Who calls whom, in what order, and what returns?',
       summary: 'A time-ordered request path with authentication, cache fallback, persistence, return traffic, and async trace.',
@@ -129,18 +129,18 @@ const RAW_RECIPES = [
       prompt: 'Use Archify sequence mode to show this request from caller to final response. Include authentication, cache hit or miss, persistence fallback, return messages, and asynchronous trace or event emission. Keep message labels short and order unambiguous.',
     },
     zh: {
-      title: 'API 请求链', question: '谁调用谁、顺序如何、最终返回什么？',
-      summary: '按时间展示鉴权、缓存回退、持久化、返回流量和异步追踪。',
-      useWhen: '适合 API 文档、请求耗时排查、鉴权评审和缓存回退说明。',
-      avoidWhen: '如果顺序不重要，受众只需要稳定的服务拓扑，请用架构图。',
-      include: ['调用方与被调用方', '请求与返回消息', '回退或错误路径', '异步副作用'],
-      prompt: '用 Archify 时序模式展示从调用方到最终响应的完整请求。包含鉴权、缓存命中或未命中、持久化回退、返回消息，以及异步 Trace 或事件上报；消息标签保持简短，顺序必须明确。',
+      title: 'API 請求鏈', question: '誰調用誰、順序如何、最終返回什麼？',
+      summary: '按時間展示鑑權、緩存回退、持久化、返回流量和異步追蹤。',
+      useWhen: '適合 API 文檔、請求耗時排查、鑑權評審和緩存回退說明。',
+      avoidWhen: '如果順序不重要，受眾只需要穩定的服務拓撲，請用架構圖。',
+      include: ['調用方與被調用方', '請求與返回消息', '回退或錯誤路徑', '異步副作用'],
+      prompt: '用 Archify 時序模式展示從調用方到最終響應的完整請求。包含鑑權、緩存命中或未命中、持久化回退、返回消息，以及異步 Trace 或事件上報；消息標籤保持簡短，順序必須明確。',
     },
   },
   {
     id: 'async-roundtrip', type: 'sequence', proof: 'async-roundtrip',
     presentation: { preset: 'signal-flow', motion: 'trace', views: 'recommended' },
-    signals: [['async roundtrip', 14], ['webhook', 10], ['callback', 10], ['acknowledgement', 8], ['timeout', 7], ['retry message', 8], ['异步回调', 14], ['回调', 10], ['确认消息', 8], ['超时', 7], ['消息重试', 9], ['webhook', 10]],
+    signals: [['async roundtrip', 14], ['webhook', 10], ['callback', 10], ['acknowledgement', 8], ['timeout', 7], ['retry message', 8], ['異步回調', 14], ['回調', 10], ['確認消息', 8], ['超時', 7], ['消息重試', 9], ['webhook', 10]],
     en: {
       title: 'Async roundtrip', question: 'What happens after the initial request returns?',
       summary: 'A sequence view of enqueue, acknowledgement, background work, callbacks, retries, timeout, and final consistency.',
@@ -150,18 +150,18 @@ const RAW_RECIPES = [
       prompt: 'Use Archify sequence mode to explain this asynchronous roundtrip. Show the initial acknowledgement, enqueue or scheduling step, background processing, callback or polling, retry and timeout behavior, and the point where the caller can observe final consistency.',
     },
     zh: {
-      title: '异步往返链路', question: '初始请求返回之后，后台还会发生什么？',
-      summary: '按时间展示入队、确认、后台处理、回调、重试、超时和最终一致。',
-      useWhen: '适合 Webhook、后台任务、队列、支付回调、最终一致和异步 API 契约。',
-      avoidWhen: '如果重点是 Topic 拓扑和消费者归属，而不是时间顺序，请用事件数据流配方。',
-      include: ['初始确认', '队列或调度器', '后台处理', '回调、重试与超时'],
-      prompt: '用 Archify 时序模式解释这段异步往返链路。展示初始确认、入队或调度、后台处理、回调或轮询、重试与超时，以及调用方何时能观察到最终一致结果。',
+      title: '異步往返鏈路', question: '初始請求返回之後，後臺還會發生什麼？',
+      summary: '按時間展示入隊、確認、後臺處理、回調、重試、超時和最終一致。',
+      useWhen: '適合 Webhook、後臺任務、隊列、支付回調、最終一致和異步 API 契約。',
+      avoidWhen: '如果重點是 Topic 拓撲和消費者歸屬，而不是時間順序，請用事件數據流配方。',
+      include: ['初始確認', '隊列或調度器', '後臺處理', '回調、重試與超時'],
+      prompt: '用 Archify 時序模式解釋這段異步往返鏈路。展示初始確認、入隊或調度、後臺處理、回調或輪詢、重試與超時，以及調用方何時能觀察到最終一致結果。',
     },
   },
   {
     id: 'data-lineage', type: 'dataflow', proof: 'product-analytics',
     presentation: { preset: 'classic', motion: 'trace', views: 'recommended' },
-    signals: [['data lineage', 15], ['etl', 12], ['warehouse', 9], ['pii', 11], ['governance', 9], ['analytics pipeline', 12], ['数据血缘', 15], ['数据管道', 11], ['数仓', 9], ['治理', 9], ['隐私数据', 10], ['用户同意', 9]],
+    signals: [['data lineage', 15], ['etl', 12], ['warehouse', 9], ['pii', 11], ['governance', 9], ['analytics pipeline', 12], ['數據血緣', 15], ['數據管道', 11], ['數倉', 9], ['治理', 9], ['隱私數據', 10], ['用戶同意', 9]],
     en: {
       title: 'Data lineage', question: 'Where does data come from, how does it change, and who consumes it?',
       summary: 'A governed path from sources through consent, transforms, sensitive stores, warehouse, and consumers.',
@@ -171,12 +171,12 @@ const RAW_RECIPES = [
       prompt: 'Use Archify dataflow mode to map this data lineage. Name every data asset and transform, show consent or classification boundaries, distinguish streaming from batch paths, and identify stores plus downstream consumers. Do not use unlabeled flows.',
     },
     zh: {
-      title: '数据血缘', question: '数据从哪里来、如何变化、最终被谁消费？',
-      summary: '从来源经过同意、转换、敏感存储、数仓直到消费者的治理路径。',
-      useWhen: '适合分析架构、ETL/ELT 评审、PII 评估、数仓设计和特征血缘。',
-      avoidWhen: '如果受众需要请求时序或操作负责人，而不是数据资产，请换其他配方。',
-      include: ['数据来源与资产', '转换阶段', '分类或同意边界', '存储与消费者'],
-      prompt: '用 Archify 数据流模式梳理这段数据血缘。为每个数据资产和转换命名，展示用户同意或数据分类边界，区分流式与批处理路径，并标明存储和下游消费者；所有数据流都必须有标签。',
+      title: '數據血緣', question: '數據從哪裡來、如何變化、最終被誰消費？',
+      summary: '從來源經過同意、轉換、敏感存儲、數倉直到消費者的治理路徑。',
+      useWhen: '適合分析架構、ETL/ELT 評審、PII 評估、數倉設計和特徵血緣。',
+      avoidWhen: '如果受眾需要請求時序或操作負責人，而不是數據資產，請換其他配方。',
+      include: ['數據來源與資產', '轉換階段', '分類或同意邊界', '存儲與消費者'],
+      prompt: '用 Archify 數據流模式梳理這段數據血緣。為每個數據資產和轉換命名，展示用戶同意或數據分類邊界，區分流式與批處理路徑，並標明存儲和下遊消費者；所有數據流都必須有標籤。',
     },
   },
   {
@@ -184,9 +184,9 @@ const RAW_RECIPES = [
     presentation: { preset: 'signal-flow', motion: 'trace', views: 'recommended' },
     start: {
       en: { descriptionPrompt: 'Use Archify dataflow mode to map this data journey: [paste the sources, data assets, transforms, stores, boundaries, and consumers]. Label every flow, distinguish streaming from batch where relevant, and mark unknown classifications or ownership instead of inventing them.' },
-      zh: { descriptionPrompt: '用 Archify 数据流模式梳理下面的数据路径：[粘贴来源、数据资产、转换、存储、边界和消费者]。为每条数据流标注名称，在有意义时区分流式与批处理，未知的分类或归属要标明而不是编造。' },
+      zh: { descriptionPrompt: '用 Archify 數據流模式梳理下面的數據路徑：[粘貼來源、數據資產、轉換、存儲、邊界和消費者]。為每條數據流標註名稱，在有意義時區分流式與批處理，未知的分類或歸屬要標明而不是編造。' },
     },
-    signals: [['event stream', 15], ['kafka topology', 14], ['topic', 8], ['consumer group', 11], ['dead letter', 10], ['dlq', 10], ['事件流', 15], ['kafka 拓扑', 14], ['主题', 7], ['消费者组', 11], ['死信', 10], ['事件地铁图', 12]],
+    signals: [['event stream', 15], ['kafka topology', 14], ['topic', 8], ['consumer group', 11], ['dead letter', 10], ['dlq', 10], ['事件流', 15], ['kafka 拓撲', 14], ['主題', 7], ['消費者組', 11], ['死信', 10], ['事件地鐵圖', 12]],
     en: {
       title: 'Event-stream topology', question: 'Which events move through which topics, processors, groups, and failure paths?',
       summary: 'A stream map of producers, topics, ordered processors, consumer groups, state, replay, and DLQ.',
@@ -196,12 +196,12 @@ const RAW_RECIPES = [
       prompt: 'Use Archify dataflow mode to draw this event-stream topology. Name producers, events, topics, ordered processors, consumer groups, state stores, replay paths, and the DLQ. Show ownership and delivery semantics only when supported by evidence.',
     },
     zh: {
-      title: '事件流拓扑', question: '哪些事件经过哪些 Topic、处理器、消费者组和失败路径？',
-      summary: '展示生产者、Topic、有序处理器、消费者组、状态、重放和 DLQ。',
-      useWhen: '适合 Kafka/事件平台设计、流处理评审、归属、重放和失败处理。',
-      avoidWhen: '如果 Topic、消费者组和投递语义都不清楚，请先用通用工作流，不要编造事件拓扑。',
-      include: ['生产者与事件名', 'Topic 与顺序', '处理器与消费者组', '状态、重放与 DLQ'],
-      prompt: '用 Archify 数据流模式绘制这段事件流拓扑。命名生产者、事件、Topic、有序处理器、消费者组、状态存储、重放路径和 DLQ；只有在证据充分时才标注归属和投递语义。',
+      title: '事件流拓撲', question: '哪些事件經過哪些 Topic、處理器、消費者組和失敗路徑？',
+      summary: '展示生產者、Topic、有序處理器、消費者組、狀態、重放和 DLQ。',
+      useWhen: '適合 Kafka/事件平臺設計、流處理評審、歸屬、重放和失敗處理。',
+      avoidWhen: '如果 Topic、消費者組和投遞語義都不清楚，請先用通用工作流，不要編造事件拓撲。',
+      include: ['生產者與事件名', 'Topic 與順序', '處理器與消費者組', '狀態、重放與 DLQ'],
+      prompt: '用 Archify 數據流模式繪製這段事件流拓撲。命名生產者、事件、Topic、有序處理器、消費者組、狀態存儲、重放路徑和 DLQ；只有在證據充分時才標註歸屬和投遞語義。',
     },
   },
   {
@@ -209,9 +209,9 @@ const RAW_RECIPES = [
     presentation: { preset: 'classic', motion: 'trace', views: 'optional' },
     start: {
       en: { descriptionPrompt: 'Use Archify lifecycle mode to model this object: [paste its states, transition events, waits, retries, cancellation, and terminal outcomes]. Separate active, waiting, recoverable-failure, and terminal states, and never hide an ending. No repository is required.' },
-      zh: { descriptionPrompt: '用 Archify 生命周期模式建模这个对象：[粘贴它的状态、转换事件、等待、重试、取消和终态]。分开执行、等待、可恢复失败和终态，不要隐藏任何结束方式。不需要代码库。' },
+      zh: { descriptionPrompt: '用 Archify 生命周期模式建模這個對象：[粘貼它的狀態、轉換事件、等待、重試、取消和終態]。分開執行、等待、可恢復失敗和終態，不要隱藏任何結束方式。不需要代碼庫。' },
     },
-    signals: [['state machine', 15], ['object lifecycle', 14], ['status transition', 11], ['terminal state', 9], ['retry state', 8], ['状态机', 15], ['生命周期', 13], ['状态流转', 11], ['终态', 9], ['等待态', 8], ['重试状态', 8]],
+    signals: [['state machine', 15], ['object lifecycle', 14], ['status transition', 11], ['terminal state', 9], ['retry state', 8], ['狀態機', 15], ['生命周期', 13], ['狀態流轉', 11], ['終態', 9], ['等待態', 8], ['重試狀態', 8]],
     en: {
       title: 'Object lifecycle', question: 'Which states exist, what events move between them, and how does it end?',
       summary: 'A state model with active work, waits, retries, cancellation, failure, and explicit terminal outcomes.',
@@ -221,18 +221,18 @@ const RAW_RECIPES = [
       prompt: 'Use Archify lifecycle mode to model this object. Separate main progress, waiting or interruption states, and terminal outcomes. Label transitions with events, include retry, cancellation, timeout, success, and failure where real, and never hide an ending.',
     },
     zh: {
-      title: '对象生命周期', question: '有哪些状态、什么事件触发流转、最终如何结束？',
-      summary: '展示执行、等待、重试、取消、失败以及明确终态的状态模型。',
-      useWhen: '适合任务、订单、工单、订阅、作业、Agent Run 等带持久状态的对象。',
-      avoidWhen: '对象没有持久状态，真正问题是参与者随时间的交互时，请使用时序图。',
-      include: ['开始与执行态', '带事件的转换', '等待与重试态', '所有终态'],
-      prompt: '用 Archify 生命周期模式建模这个对象。分开主进度、等待或中断状态和终态；用事件标注转换，并在真实存在时展示重试、取消、超时、成功和失败，不能隐藏任何结束方式。',
+      title: '對象生命周期', question: '有哪些狀態、什麼事件觸發流轉、最終如何結束？',
+      summary: '展示執行、等待、重試、取消、失敗以及明確終態的狀態模型。',
+      useWhen: '適合任務、訂單、工單、訂閱、作業、Agent Run 等帶持久狀態的對象。',
+      avoidWhen: '對象沒有持久狀態，真正問題是參與者隨時間的交互時，請使用時序圖。',
+      include: ['開始與執行態', '帶事件的轉換', '等待與重試態', '所有終態'],
+      prompt: '用 Archify 生命周期模式建模這個對象。分開主進度、等待或中斷狀態和終態；用事件標註轉換，並在真實存在時展示重試、取消、超時、成功和失敗，不能隱藏任何結束方式。',
     },
   },
   {
     id: 'deployment-lifecycle', type: 'lifecycle', proof: 'deployment-lifecycle',
     presentation: { preset: 'signal-flow', motion: 'trace', views: 'recommended' },
-    signals: [['deployment lifecycle', 15], ['release state', 10], ['promotion state', 9], ['approval status', 8], ['rollback state', 10], ['部署生命周期', 15], ['发布状态', 10], ['晋级', 7], ['审批状态', 8], ['回滚状态', 10]],
+    signals: [['deployment lifecycle', 15], ['release state', 10], ['promotion state', 9], ['approval status', 8], ['rollback state', 10], ['部署生命周期', 15], ['發布狀態', 10], ['晉級', 7], ['審批狀態', 8], ['回滾狀態', 10]],
     en: {
       title: 'Deployment lifecycle', question: 'What state is a release in, and what can happen next?',
       summary: 'A deployment state model covering queued, building, verifying, approval, promotion, rollback, and terminal outcomes.',
@@ -242,12 +242,12 @@ const RAW_RECIPES = [
       prompt: 'Use Archify lifecycle mode to model the deployment object. Show queued, building, verifying, waiting for approval, promoting, rolling back, and every terminal outcome. Label the events and guards that permit each transition.',
     },
     zh: {
-      title: '部署生命周期', question: '一次发布当前处于什么状态，下一步可能发生什么？',
-      summary: '覆盖排队、构建、验证、审批、晋级、回滚和终态的部署状态模型。',
-      useWhen: '适合发布控制器、GitOps 对账、环境晋级和部署状态 API。',
-      avoidWhen: '如果重点是人员与 CI 的交付动作顺序，而不是部署对象状态，请用交付工作流。',
-      include: ['排队与执行态', '验证与审批', '晋级与回滚', '成功、失败与取消'],
-      prompt: '用 Archify 生命周期模式建模部署对象。展示排队、构建、验证、等待审批、晋级、回滚以及所有终态，并标注允许每次状态转换的事件和守卫条件。',
+      title: '部署生命周期', question: '一次發布當前處於什麼狀態，下一步可能發生什麼？',
+      summary: '覆蓋排隊、構建、驗證、審批、晉級、回滾和終態的部署狀態模型。',
+      useWhen: '適合發布控制器、GitOps 對帳、環境晉級和部署狀態 API。',
+      avoidWhen: '如果重點是人員與 CI 的交付動作順序，而不是部署對象狀態，請用交付工作流。',
+      include: ['排隊與執行態', '驗證與審批', '晉級與回滾', '成功、失敗與取消'],
+      prompt: '用 Archify 生命周期模式建模部署對象。展示排隊、構建、驗證、等待審批、晉級、回滾以及所有終態，並標註允許每次狀態轉換的事件和守衛條件。',
     },
   },
 ];
@@ -278,7 +278,7 @@ export function startPromptsFor(recipe, lang = 'en') {
   const repositoryPrompt = recipe.type === 'architecture'
     ? copy.prompt
     : language === 'zh'
-      ? `先检查这个仓库里的相关证据，然后${copy.prompt}不要编造代码无法支持的行为。`
+      ? `先檢查這個倉庫裡的相關證據，然後${copy.prompt}不要編造代碼無法支持的行為。`
       : `Inspect this repository for evidence, then ${copy.prompt.charAt(0).toLowerCase()}${copy.prompt.slice(1)} Do not invent behavior that the code does not support.`;
   return { descriptionPrompt, repositoryPrompt };
 }
@@ -343,10 +343,10 @@ export function recommendScenario(query, options = {}) {
 export function formatScenarioList(lang = 'en') {
   const isZh = lang === 'zh';
   const heading = isZh
-    ? `Archify 场景配方（${SCENARIO_RECIPES.length}）`
+    ? `Archify 場景配方（${SCENARIO_RECIPES.length}）`
     : `Archify scenario recipes (${SCENARIO_RECIPES.length})`;
   const intro = isZh
-    ? '先选择你要回答的问题，再选择图表类型。可运行：archify guide "你的场景"'
+    ? '先選擇你要回答的問題，再選擇圖表類型。可運行：archify guide "你的場景"'
     : 'Choose the question before the diagram type. Run: archify guide "your scenario"';
   return [heading, '', intro, '', ...listScenarioRecipes(lang).flatMap((recipe) => [
     `${recipe.id}  [${recipe.type}]  ${recipe.title}`,
@@ -358,7 +358,7 @@ export function formatScenarioRecommendation(result) {
   const isZh = result.lang === 'zh';
   const recipe = result.recommendation;
   const labels = isZh ? {
-    heading: '推荐', question: '要回答的问题', use: '适合', avoid: '不要这样用', include: '必须包含', presentation: '表现建议', prompt: '可直接复制的提示词', alternatives: '其他可能', confidence: '置信度',
+    heading: '推薦', question: '要回答的問題', use: '適合', avoid: '不要這樣用', include: '必須包含', presentation: '表現建議', prompt: '可直接複製的提示詞', alternatives: '其他可能', confidence: '置信度',
   } : {
     heading: 'Recommendation', question: 'Question answered', use: 'Use when', avoid: 'Avoid when', include: 'Must include', presentation: 'Presentation', prompt: 'Copy-ready prompt', alternatives: 'Other possible fits', confidence: 'Confidence',
   };

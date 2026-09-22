@@ -94,8 +94,8 @@ row visible
 ([Relationship Lens implementation](../archify/assets/template.html),
 [Relationship Lens tests](../archify/test/relationship-lens.test.mjs)).
 
-The gap is consequently not “invent an edge inspector.” It is “let the line open
-the inspector state Archify already has.” Reusing the existing panel is important
+The gap is consequently not 「invent an edge inspector.」 It is 「let the line open
+the inspector state Archify already has.」 Reusing the existing panel is important
 because the viewer already has toolbar menus, diagram navigation, Guided Story,
 the Semantic Lens, Route Probe, focus passport, overview map, and presentation or
 embed variants
@@ -162,7 +162,7 @@ also exposes `edgesFocusable` and `elementsSelectable` independently
 
 The current `EdgeWrapper` implementation derives focusability and selectability
 separately, gives a focusable edge `tabIndex=0`, supplies a default accessible
-name “Edge from source to target,” and maps click plus selection keys to selected
+name 「Edge from source to target,」 and maps click plus selection keys to selected
 state. `Escape` unselects and blurs the edge
 ([official `EdgeWrapper` source at a fixed commit](https://github.com/xyflow/xyflow/blob/dd308ab401d49518f73d1e91c43faf254ff5a4c9/packages/react/src/components/EdgeWrapper/index.tsx#L124-L214)).
 
@@ -175,13 +175,13 @@ give each de-duplicated relationship one semantic focus target; support click,
 tap, `Enter`, `Space`, and `Escape`; derive the accessible name from real source,
 target, and label metadata.
 
-**Adapt:** Archify is a viewer, so activation means “inspect/pin this authored
-relationship,” not select for deletion, reconnection, or editing. Keep the
+**Adapt:** Archify is a viewer, so activation means 「inspect/pin this authored
+relationship,」 not select for deletion, reconnection, or editing. Keep the
 visible edge style and the compiled graph immutable.
 
 **Skip:** deletion keys, reconnect handles, drag editing, multi-selection,
 editable labels, edge z-index mutation, React state, and the default generic
-“group” semantics. A pin behaves as a two-state command, so a toggle-button
+「group」 semantics. A pin behaves as a two-state command, so a toggle-button
 contract is clearer for Archify.
 
 ### 2. Cytoscape.js: touch selection is normal, but canvas rendering needs an application accessibility layer
@@ -375,8 +375,8 @@ Reader promise:
 > Point at, tab to, or tap any authored relationship to understand exactly what
 > connects which nodes. Activate it once to keep that explanation pinned.
 
-The wording should use “relationship,” not “edge,” in reader-facing labels.
-“Edge” is an implementation term; “relationship” is the meaning already used by
+The wording should use 「relationship,」 not 「edge,」 in reader-facing labels.
+「Edge」 is an implementation term; 「relationship」 is the meaning already used by
 the current Lens.
 
 ### Interaction geometry

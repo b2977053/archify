@@ -89,7 +89,7 @@ Primary sources:
 - CI matrices for Python 3.9/3.12, render regression, motion smoke, package
   consistency, and installed-skill canaries.
 
-The repository's “14 UML types” language needs qualification. Its own coverage
+The repository's 「14 UML types」 language needs qualification. Its own coverage
 map says that component, deployment, package, composite structure, and object
 diagrams are adaptations of generic architecture/class modes; communication is
 approximated with sequence, timing is adapted to timeline, and interaction
@@ -155,7 +155,7 @@ individual stargazers.
 - The first-run path is not truly zero-install for PNG/GIF output.
 - GIF animation is not arbitrary SVG animation. It only accepts generated SVGs
   matching one of twelve approved role/stage/order/topology contracts.
-- “Full UML support” is broader than the independent renderer surface.
+- 「Full UML support」 is broader than the independent renderer surface.
 - Manual fine-tuning and stable incremental edits are not a first-class loop;
   SVG is editable externally, but the project is optimized for regenerate and
   validate.

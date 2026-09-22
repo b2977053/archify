@@ -997,15 +997,15 @@ test('dataflow: showcase rejects a relationship label that hides another route',
 test('dataflow: validator and SVG share the 27px CJK/emoji classification mask', () => {
   const d = load('dataflow');
   const flow = d.flows[0];
-  flow.label = '写入🚀';
-  flow.classification = '机密🔐';
+  flow.label = '寫入🚀';
+  flow.classification = '機密🔐';
   const { code, stderr, outPath } = render('dataflow', d);
   assert.equal(code, 0, stderr);
   const html = fs.readFileSync(outPath, 'utf8');
   const group = html.match(/<g data-detail="context"[^>]*data-edge-id="web-clickstream"[^>]*>[\s\S]*?<\/g>/)?.[0] || '';
-  assert.match(group, /data-edge-label="写入🚀"/);
+  assert.match(group, /data-edge-label="寫入🚀"/);
   assert.match(group, /<rect x="[^\"]+" y="[^\"]+" width="41\.4" height="27" rx="4" class="c-mask"\/>/);
-  assert.match(group, />机密🔐<\/text>/);
+  assert.match(group, />機密🔐<\/text>/);
 });
 
 test('architecture: showcase rejects a connection label that hides another route', () => {

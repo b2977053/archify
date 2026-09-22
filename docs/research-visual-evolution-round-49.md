@@ -39,7 +39,7 @@ Labeled relationships are emitted both as the drawable route and as a context
 label group with the same `data-edge-key`. In the current Agent Tool Call Gallery
 artifact, 5 of 11 relationship keys occur twice (`1`, `3`, `5`, `9`, `10`). The
 `happy-path` story includes `chat → planner`, whose authored relationship is key
-`1`; its route and label group are therefore counted as two “edges”, classified
+`1`; its route and label group are therefore counted as two 「edges」, classified
 as `multiple`, and excluded by the existing `step.edges.length === 1` pulse gate.
 The source JSON proves that this is one relationship with ID `plan-request`, not
 two parallel relationships.

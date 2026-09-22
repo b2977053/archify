@@ -11,7 +11,7 @@ Archify can already restore a named chapter, one focused node, one authored rout
 or one semantic-kind Lens from a URL. Round 32 also made every Story Trail beat a
 direct native control, but deliberately left the selected beat out of the URL.
 The missing product moment is now narrow and visible: a reader can stop a story on
-exactly “Tool Router, beat 4 of 8” but cannot send another person a link that opens
+exactly 「Tool Router, beat 4 of 8」 but cannot send another person a link that opens
 on that same semantic node, exact adjacent relationship, receipt, and chapter
 camera. These are current viewer contracts, not inferred capabilities
 ([current README](../README.md),
@@ -104,8 +104,8 @@ from semantic node bounds. Manual pan/zoom is not written to the URL, and canoni
 export resets/removes viewer-only state
 ([Semantic Camera and export implementation](../archify/assets/template.html)).
 
-The useful gap is therefore not “save everything.” It is “give the one selected
-Story beat a stable semantic address.”
+The useful gap is therefore not 「save everything.」 It is 「give the one selected
+Story beat a stable semantic address.」
 
 ## Primary-source findings
 
@@ -202,7 +202,7 @@ media receives `slide:start` and `slide:stop` messages when its containing slide
 becomes visible or hidden
 ([official media/iframe documentation](https://revealjs.com/media/#iframe-post-message)).
 
-**Borrow:** a deep link can be “named container + one incremental position,” and
+**Borrow:** a deep link can be 「named container + one incremental position,」 and
 playback is an orthogonal, explicit choice rather than implicit in the position.
 
 **Adapt:** use a stable node ID instead of a numeric fragment index. Archify node
@@ -324,7 +324,7 @@ model.
 | New authored `meta.views[].beats[].id` | Explicit beat identity | Adds schema/authoring burden when node IDs are already unique within normalized views | Skip |
 | `#focus=<beat-node>` | Reuses an existing link | Loses chapter, past/pending story, and exact adjacent relationship meaning | Skip |
 | `#view=<id>&beat=<stable-node-id>` | Human-readable, deterministic, composable inside one current mode | Needs careful restore ordering with camera/Handoff and autoplay | **Build** |
-| Update URL on every automatic beat | Address bar always mirrors playhead | Timer-driven URL churn; a settled replay link can accidentally become “start from final beat” | Skip |
+| Update URL on every automatic beat | Address bar always mirrors playhead | Timer-driven URL churn; a settled replay link can accidentally become 「start from final beat」 | Skip |
 | Copy-only link with no restore-on-load | Easy UI demo | Link is decorative rather than recoverable state | Skip |
 
 ## Borrow / adapt / skip decision
@@ -375,7 +375,7 @@ It is disabled when no chapter beat is selected. Activating it:
    `#view=<encoded-view-id>&beat=<encoded-node-id>`;
 4. copies it through the same clipboard/fallback pattern used by Focus, Route,
    and Lens;
-5. reports one bounded “Moment link copied” status; and
+5. reports one bounded 「Moment link copied」 status; and
 6. does not move focus, camera, diagram/page scroll, or Story Trail scroll.
 
 Do not add a share modal, social destination list, QR code, URL shortener, or a
@@ -461,7 +461,7 @@ evidence shows the hidden link state is confusing.
 
 Playback uses the current single generation-owned scheduler. Starting from a
 linked beat sets its elapsed dwell to zero and retains the existing per-chapter
-dwell calculation; it does not invent a second “moment player.” User interaction,
+dwell calculation; it does not invent a second 「moment player.」 User interaction,
 page hiding, Still, and reduced motion keep their existing pause/cancel ownership.
 
 When reduced motion is active:
@@ -510,9 +510,9 @@ authored truth wins; the URL does not preserve stale topology.
 
 ### Accessibility contract
 
-- Use a native `button type="button"` named “Copy link to current story moment.”
+- Use a native `button type="button"` named 「Copy link to current story moment.」
 - Disable it when `beat()` returns no selected beat; do not expose a link to an
-  ambiguous chapter-only state under the word “moment.”
+  ambiguous chapter-only state under the word 「moment.」
 - Copy activation may pause playback because it is direct reader exploration;
   keyboard focus alone retains the existing pause-without-selection contract.
 - Restoration does not move DOM focus and does not announce every automatic beat.
@@ -630,7 +630,7 @@ because that can produce a convincing but incorrect moment.
 Treat `beat` as a starting checkpoint and `play=1` as the explicit command. Do not
 let timer-driven beats rewrite it. A static link never starts playback.
 
-### Risk: “exact moment” is interpreted as a pixel-perfect screenshot
+### Risk: 「exact moment」 is interpreted as a pixel-perfect screenshot
 
 Document that the contract is semantic: same chapter, current node, adjacent
 authored relationship, narrative states, and deterministic device-appropriate

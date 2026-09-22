@@ -245,7 +245,7 @@ test('Export preserves menu, clipboard, semantic cards and recording lifecycles'
     const originalInput = fs.readFileSync(input, 'utf8');
     try {
       const cjkSource = JSON.parse(originalInput);
-      cjkSource.components[0].label = '用户入口';
+      cjkSource.components[0].label = '用戶入口';
       fs.writeFileSync(input, JSON.stringify(cjkSource));
       execFileSync(process.execPath, [path.join(skillRoot, 'renderers/architecture/render-architecture.mjs'), input, file]);
       await load();
@@ -255,7 +255,7 @@ test('Export preserves menu, clipboard, semantic cards and recording lifecycles'
       assert.ok(download.name.endsWith('.svg'));
       assert.equal(download.type, 'image/svg+xml;charset=utf-8');
       assert.ok(download.text.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'standalone SVG must declare its UTF-8 encoding');
-      assert.ok(download.text.includes('用户入口'), 'CJK label must survive serialization');
+      assert.ok(download.text.includes('用戶入口'), 'CJK label must survive serialization');
       await record('svg-utf8');
     } finally {
       fs.writeFileSync(input, originalInput);

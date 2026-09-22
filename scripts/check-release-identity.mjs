@@ -81,7 +81,7 @@ function versionLabels(source) {
 function checkReadme(relativePath, source, version, language, isDevelopment) {
   const badge = `/badge/version-${shieldEscape(version)}-`;
   const markerLabel = language === 'zh'
-    ? isDevelopment ? '当前开发版本：' : '当前稳定版本：'
+    ? isDevelopment ? '當前開發版本：' : '當前穩定版本：'
     : isDevelopment ? 'Current development version:' : 'Current stable version:';
   const identity = isDevelopment ? 'development' : 'stable';
   const hasMarker = source.split('\n').some((line) => line.includes(markerLabel) && line.includes(`\`v${version}\``));
@@ -94,7 +94,7 @@ function checkDocument(relativePath, source, version, isDevelopment) {
   const labels = versionLabels(source);
   const identity = isDevelopment ? 'development' : 'stable';
   const englishLabel = isDevelopment ? /development/i : /stable/i;
-  const chineseLabel = isDevelopment ? /开发版/ : /稳定版/;
+  const chineseLabel = isDevelopment ? /開發版/ : /穩定版/;
   if (labels.length === 0 || labels.some((label) => label !== version)
     || !englishLabel.test(source) || !chineseLabel.test(source)) {
     fail(`${relativePath} must advertise ${identity} identity v${version} in both languages without a conflicting version alias.`);
@@ -106,7 +106,7 @@ function checkRavenBoundary(relativePath, source, language) {
   const installedRoot = `${installParent}\/archify`;
   const pathBoundary = String.raw`(?=$|[\s\x60'"<>,.;:，；。])`;
   const hasEnglishManual = /manual ZIP/i.test(source);
-  const hasChineseManual = /(?:手动[^\n<]{0,40}ZIP|ZIP[^\n<]{0,40}手动)/i.test(source);
+  const hasChineseManual = /(?:手動[^\n<]{0,40}ZIP|ZIP[^\n<]{0,40}手動)/i.test(source);
   const hasRequiredCopy = language === 'both'
     ? hasEnglishManual && hasChineseManual
     : language === 'zh' ? hasChineseManual : hasEnglishManual;
@@ -119,11 +119,11 @@ function checkRavenBoundary(relativePath, source, language) {
     'i',
   ).test(source);
   const chineseExtractsIntoParent = new RegExp(
-    String.raw`archify\.zip[^\n]{0,100}解压(?:到|至)\s*[\x60'"<]*${installParent}${pathBoundary}`,
+    String.raw`archify\.zip[^\n]{0,100}解壓(?:到|至)\s*[\x60'"<]*${installParent}${pathBoundary}`,
     'i',
   ).test(source);
   const chineseExplainsInstalledRoot = new RegExp(
-    String.raw`(?:得到|生成|产生|最终位于)[^\n]{0,120}${installedRoot}`,
+    String.raw`(?:得到|生成|產生|最終位於)[^\n]{0,120}${installedRoot}`,
     'i',
   ).test(source);
   const hasCorrectDestination = language === 'both'
@@ -133,7 +133,7 @@ function checkRavenBoundary(relativePath, source, language) {
       ? chineseExtractsIntoParent && chineseExplainsInstalledRoot
       : englishExtractsIntoParent && englishExplainsInstalledRoot;
   const nestedDestination = new RegExp(
-    String.raw`(?:\b(?:extract|unpack)[^\n]{0,220}(?:into|to)|解压(?:到|至))\s*[\x60'"<]*${installedRoot}`,
+    String.raw`(?:\b(?:extract|unpack)[^\n]{0,220}(?:into|to)|解壓(?:到|至))\s*[\x60'"<]*${installedRoot}`,
     'i',
   ).test(source);
   const inventsSwitcher = /data-agent=["']raven["']/i.test(source)
@@ -147,17 +147,17 @@ function checkRavenBoundary(relativePath, source, language) {
 
 function checkIdentityTemplate(relativePath, source, isDevelopment) {
   const hasHardcodedVersion = /\b\d+\.\d+\.\d+(?:-[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?\b/.test(source);
-  const identity = isDevelopment ? 'development and 开发版' : 'stable and 稳定版';
+  const identity = isDevelopment ? 'development and 開發版' : 'stable and 穩定版';
   const hasIdentity = isDevelopment
-    ? /development/i.test(source) && /开发版/.test(source)
-    : /stable/i.test(source) && /稳定版/.test(source);
+    ? /development/i.test(source) && /開發版/.test(source)
+    : /stable/i.test(source) && /穩定版/.test(source);
   if (!source.includes('[[ARCHIFY_VERSION]]') || !hasIdentity || hasHardcodedVersion) {
     fail(`${relativePath} must use [[ARCHIFY_VERSION]] with ${identity} labels, never a hardcoded package version.`);
   }
   const versionLines = source.split('\n').filter(line => line.includes('[[ARCHIFY_VERSION]]'));
-  const staleIdentity = isDevelopment ? /\bstable\b|稳定版/i : /\bdevelopment\b|开发版/i;
+  const staleIdentity = isDevelopment ? /\bstable\b|穩定版/i : /\bdevelopment\b|開發版/i;
   if (versionLines.some(line => staleIdentity.test(line))) {
-    const staleLabel = isDevelopment ? 'stable or 稳定版' : 'development or 开发版';
+    const staleLabel = isDevelopment ? 'stable or 穩定版' : 'development or 開發版';
     fail(`${relativePath} must not label [[ARCHIFY_VERSION]] as ${staleLabel}.`);
   }
 }
@@ -260,7 +260,7 @@ if (hasSupportedVersion) {
   if (newestStableLabel && isDevelopment) {
     const stableMinor = newestStableLabel.split('.').slice(0, 2).join('\\.');
     if (new RegExp(`Archify ${stableMinor} includes\\b`).test(english)
-      || new RegExp(`Archify ${stableMinor} 已覆盖`).test(chinese)) {
+      || new RegExp(`Archify ${stableMinor} 已覆蓋`).test(chinese)) {
       fail(`README capability summary must describe v${version} as development, not published ${newestStableLabel}.`);
     }
   }

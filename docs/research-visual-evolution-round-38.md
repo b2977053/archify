@@ -11,8 +11,8 @@ viewer-only caption for the active Story Beat that explains what the camera is
 showing without asking the reader to decode glow, direction, or graph geometry.
 
 The current Story Follow Camera makes the active neighborhood readable. The
-missing layer is semantic narration. A moving camera can answer “where should I
-look?” but not always “what happened here?” Archify already owns the facts needed
+missing layer is semantic narration. A moving camera can answer 「where should I
+look?」 but not always 「what happened here?」 Archify already owns the facts needed
 to answer that second question:
 
 - stable current and previous node IDs and labels;
@@ -338,7 +338,7 @@ render differently by surface.
 
 ### Invented causality
 
-If `A · B` becomes “A calls B” without one exact forward edge and label, the
+If `A · B` becomes 「A calls B」 without one exact forward edge and label, the
 feature has violated Archify's trust boundary. Fail closed to relation class,
 endpoints, and existing metadata.
 

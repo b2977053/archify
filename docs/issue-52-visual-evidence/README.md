@@ -2,8 +2,8 @@
 
 Browser review status: **passed** on 2026-08-02 with Google Chrome headless at
 1280px width. The source fixtures are the two reproductions from Issue #52.
-“Before” was rendered from `origin/main@a097c2d63eceeff9603a911a9075f0694d381f83`;
-“after” was rendered from this worktree.
+「Before」 was rendered from `origin/main@a097c2d63eceeff9603a911a9075f0694d381f83`;
+「after」 was rendered from this worktree.
 
 ![Before/after matrix](contact-sheet.png)
 

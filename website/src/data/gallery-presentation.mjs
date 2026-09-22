@@ -11,9 +11,9 @@ export const CASES = [
     accent: '#67e8f9',
     featured: true,
     titleEn: 'Agent Tool Call',
-    titleZh: '智能体工具调用',
+    titleZh: '智能體工具調用',
     descriptionEn: 'Four consolidated lanes trace a policy-aware agent loop across user interaction, agent runtime, policy and recovery, and tool execution with evidence.',
-    descriptionZh: '四条整合泳道呈现策略感知的智能体闭环：用户交互、智能体运行时、策略与恢复，以及带证据的工具执行。',
+    descriptionZh: '四條整合泳道呈現策略感知的智能體閉環：用戶交互、智能體運行時、策略與恢復，以及帶證據的工具執行。',
   },
   {
     id: 'deployment-ownership',
@@ -24,9 +24,9 @@ export const CASES = [
     view: 'request-boundary',
     accent: '#38bdf8',
     titleEn: 'Production Deployment Ownership',
-    titleZh: '生产部署与归属',
+    titleZh: '生產部署與歸屬',
     descriptionEn: 'Regions, private networks, workload owners, state, cross-region replication, audit evidence, and named boundary crossings.',
-    descriptionZh: '展示区域、私有网络、工作负载归属、状态、跨区复制、审计证据和明确的边界穿越。',
+    descriptionZh: '展示區域、私有網絡、工作負載歸屬、狀態、跨區複製、審計證據和明確的邊界穿越。',
   },
   {
     id: 'cache-miss',
@@ -37,9 +37,9 @@ export const CASES = [
     view: 'cache-fallback',
     accent: '#c4b5fd',
     titleEn: 'Cache Miss Request',
-    titleZh: '缓存未命中请求',
+    titleZh: '緩存未命中請求',
     descriptionEn: 'A time-ordered request path covering authentication, cache fallback, persistence, return traffic, and async tracing.',
-    descriptionZh: '按时间展开鉴权、缓存回退、持久化、返回流量与异步追踪。',
+    descriptionZh: '按時間展開鑑權、緩存回退、持久化、返回流量與異步追蹤。',
   },
   {
     id: 'delivery-workflow',
@@ -50,9 +50,9 @@ export const CASES = [
     view: 'approval-to-production',
     accent: '#34d399',
     titleEn: 'Release Delivery Workflow',
-    titleZh: '研发交付流程',
+    titleZh: '研發交付流程',
     descriptionEn: 'A change moves through reproducible build, blocking gates, human approval, canary verification, communication, and rollback.',
-    descriptionZh: '一次变更依次经过可复现构建、阻断检查、人工审批、金丝雀验证、沟通和回滚。',
+    descriptionZh: '一次變更依次經過可復現構建、阻斷檢查、人工審批、金絲雀驗證、溝通和回滾。',
   },
   {
     id: 'incident-runbook',
@@ -63,9 +63,9 @@ export const CASES = [
     view: 'mitigate-and-verify',
     accent: '#fb7185',
     titleEn: 'Incident Response Runbook',
-    titleZh: '事故处置 Runbook',
+    titleZh: '事故處置 Runbook',
     descriptionEn: 'Detection, incident command, mitigation, stakeholder communication, escalation, rollback, and recovery evidence.',
-    descriptionZh: '覆盖发现、事故指挥、缓解、干系人沟通、升级、回滚和恢复证据。',
+    descriptionZh: '覆蓋發現、事故指揮、緩解、干係人溝通、升級、回滾和恢復證據。',
   },
   {
     id: 'product-analytics',
@@ -76,9 +76,9 @@ export const CASES = [
     view: 'consent-boundary',
     accent: '#f6c453',
     titleEn: 'Product Analytics',
-    titleZh: '产品分析数据流',
+    titleZh: '產品分析數據流',
     descriptionEn: 'Events move through consent, streaming, PII isolation, warehouse sync, and governed downstream consumers.',
-    descriptionZh: '事件依次经过用户同意、流处理、PII 隔离、数仓同步和受治理的下游消费者。',
+    descriptionZh: '事件依次經過用戶同意、流處理、PII 隔離、數倉同步和受治理的下遊消費者。',
   },
   {
     id: 'async-roundtrip',
@@ -89,9 +89,9 @@ export const CASES = [
     view: 'work-and-retry',
     accent: '#a78bfa',
     titleEn: 'Async Job Roundtrip',
-    titleZh: '异步任务往返链路',
+    titleZh: '異步任務往返鏈路',
     descriptionEn: 'A fast acknowledgement leads into durable queueing, background work, retry, final-state storage, webhook, and polling fallback.',
-    descriptionZh: '快速确认后进入持久队列、后台处理、重试、终态存储、Webhook 和轮询回退。',
+    descriptionZh: '快速確認後進入持久隊列、後臺處理、重試、終態存儲、Webhook 和輪詢回退。',
   },
   {
     id: 'event-stream',
@@ -102,9 +102,9 @@ export const CASES = [
     view: 'order-transit',
     accent: '#fbbf24',
     titleEn: 'Order Event-stream Topology',
-    titleZh: '订单事件流拓扑',
+    titleZh: '訂單事件流拓撲',
     descriptionEn: 'Named producers, partitioned topics, consumer groups, idempotent state, dead letters, operator ownership, and controlled replay.',
-    descriptionZh: '展示命名生产者、分区 Topic、消费者组、幂等状态、死信、负责人和受控重放。',
+    descriptionZh: '展示命名生產者、分區 Topic、消費者組、冪等狀態、死信、負責人和受控重放。',
   },
   {
     id: 'agent-run',
@@ -115,9 +115,9 @@ export const CASES = [
     view: 'main-lifecycle',
     accent: '#fb7185',
     titleEn: 'Agent Run Lifecycle',
-    titleZh: '智能体运行生命周期',
+    titleZh: '智能體運行生命周期',
     descriptionEn: 'Planning, execution, review, human approval, retry, cancellation, and terminal outcomes in one state model.',
-    descriptionZh: '用一套状态模型表达规划、执行、复核、人工审批、重试、取消和终态。',
+    descriptionZh: '用一套狀態模型表達規劃、執行、覆核、人工審批、重試、取消和終態。',
   },
   {
     id: 'deployment-lifecycle',
@@ -128,9 +128,9 @@ export const CASES = [
     view: 'rollback-outcomes',
     accent: '#f472b6',
     titleEn: 'Deployment Release Lifecycle',
-    titleZh: '部署发布生命周期',
+    titleZh: '部署發布生命周期',
     descriptionEn: 'The deployment object moves through build, verification, approval, promotion, health pause, rollback, and explicit terminal outcomes.',
-    descriptionZh: '部署对象经过构建、验证、审批、晋级、健康暂停、回滚和明确终态。',
+    descriptionZh: '部署對象經過構建、驗證、審批、晉級、健康暫停、回滾和明確終態。',
   },
   {
     id: 'web-app',
@@ -141,9 +141,9 @@ export const CASES = [
     view: 'request-path',
     accent: '#6ee7b7',
     titleEn: 'Three-tier Web App',
-    titleZh: '三层 Web 应用',
+    titleZh: '三層 Web 應用',
     descriptionEn: 'A classic AWS web stack with edge delivery, authentication, API services, cache, persistence, and background work.',
-    descriptionZh: '经典 AWS Web 栈：边缘分发、鉴权、API 服务、缓存、持久化与后台任务。',
+    descriptionZh: '經典 AWS Web 棧：邊緣分發、鑑權、API 服務、緩存、持久化與後臺任務。',
   },
 ];
 
@@ -170,7 +170,7 @@ export function renderCard(entry, index) {
     ? `${artifact}?present=1&play=1#view=${encodeURIComponent(entry.view)}`
     : `${artifact}#focus=${encodeURIComponent(entry.focus)}`;
   const exploreEn = entry.view ? 'Play named chapter ↗' : 'Explore focus ↗';
-  const exploreZh = entry.view ? '播放命名章节 ↗' : '探索聚焦路径 ↗';
+  const exploreZh = entry.view ? '播放命名章節 ↗' : '探索聚焦路徑 ↗';
   const engineeringProof = entry.engineeringProfile
     ? `\n              <div class="engineering-proof" aria-label="Engineering profile validation"><span>Engineering profile</span><strong>${esc(entry.engineeringProfile.replaceAll('-', ' ').toUpperCase())} · PASS</strong></div>`
     : '';
@@ -199,7 +199,7 @@ export function renderCard(entry, index) {
                 <a class="card-link primary" href="${esc(focusedArtifact)}" target="_blank" rel="noopener" data-en="${esc(exploreEn)}" data-zh="${esc(exploreZh)}">${esc(exploreEn)}</a>
                 <a class="card-link" href="${esc(artifact)}" target="_blank" rel="noopener" data-en="Full artifact" data-zh="完整成品">Full artifact</a>
                 <a class="card-link" href="${esc(source)}" target="_blank" rel="noopener">JSON IR</a>
-                <a class="card-link create-link" href="start.html?type=${esc(entry.type)}&amp;source=gallery" data-en="Create this type" data-zh="按此类型开始">Create this type</a>
+                <a class="card-link create-link" href="start.html?type=${esc(entry.type)}&amp;source=gallery" data-en="Create this type" data-zh="按此類型開始">Create this type</a>
               </div>
             </div>
           </article>`;

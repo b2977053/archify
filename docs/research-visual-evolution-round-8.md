@@ -5,7 +5,7 @@ Status: implemented on `codex/archify-visual-evolution`
 
 ## Problem
 
-Archify can focus a node after the reader sees it, and guided views can lead a reader through authored paths. A reader opening an unfamiliar or wide diagram still has no direct answer to “where is Redis?”, “which node owns audit?”, or “show me the worker.”
+Archify can focus a node after the reader sees it, and guided views can lead a reader through authored paths. A reader opening an unfamiliar or wide diagram still has no direct answer to 「where is Redis?」, 「which node owns audit?」, or 「show me the worker.」
 
 ## External patterns reviewed
 

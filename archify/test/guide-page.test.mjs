@@ -40,7 +40,7 @@ test('guide page: ships bilingual recipes and syntactically valid interaction co
     `Scenario guide / ${releaseIdentity} / v${packageVersion}`,
   );
   assert.match(html, /Question-first diagramming/);
-  assert.match(html, /先问题，后图表/);
+  assert.match(html, /先問題，後圖表/);
   assert.match(html, /archify guide &quot;your scenario&quot;|archify guide "your scenario"/);
 
   const dataMatch = html.match(/<script id="guide-data" type="application\/json">([\s\S]*?)<\/script>/);
@@ -51,7 +51,7 @@ test('guide page: ships bilingual recipes and syntactically valid interaction co
   assert.ok(data.every((recipe) => recipe.en.prompt && recipe.zh.prompt && recipe.proof));
   assert.match(html, /gallery\.html#proof-/);
   assert.match(html, /Open verified example/);
-  assert.match(html, /打开验证成品/);
+  assert.match(html, /打開驗證成品/);
 
   const scriptMatch = html.match(/<script>\n([\s\S]*?)\n  <\/script>\n<\/body>/);
   assert.ok(scriptMatch);

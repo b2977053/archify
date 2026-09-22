@@ -10,7 +10,7 @@ How can Archify borrow the appeal of richer animated diagram products without we
 
 ### fireworks-tech-graph
 
-The current repository presents twelve visual styles, semantic SVG-to-GIF motion, offline interactive HTML, explicit geometry contracts, and a bounded render → structural validation → PNG readback → targeted revision loop. Its most transferable lesson is not “add more moving pixels”; it is that motion and visual variety become trustworthy when each has an executable contract and a visible validation receipt.
+The current repository presents twelve visual styles, semantic SVG-to-GIF motion, offline interactive HTML, explicit geometry contracts, and a bounded render → structural validation → PNG readback → targeted revision loop. Its most transferable lesson is not 「add more moving pixels」; it is that motion and visual variety become trustworthy when each has an executable contract and a visible validation receipt.
 
 Source: <https://github.com/yizhiyanhua-ai/fireworks-tech-graph>
 

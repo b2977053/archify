@@ -4,7 +4,7 @@
 
 Archify could deep-link a named view and manually play a complete guided story, but a shared `#view=` URL opened on a still frame. The landing-page proof selector had a more serious mismatch: its link named a guided view while the embedded artifact loaded only the generic diagram. Ambient trace loops also meant a proof grid could keep moving long after it had communicated its point.
 
-The product needed a compact “show me this chapter” contract, not another animation system.
+The product needed a compact 「show me this chapter」 contract, not another animation system.
 
 ## Patterns worth borrowing
 

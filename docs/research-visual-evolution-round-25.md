@@ -6,7 +6,7 @@ Research date: 2026-07-19 (Asia/Shanghai)
 
 Archify already has optional trace animation, one-hop Intent Trace, directed
 Route Probe, Story Trail, and exact Relationship Preview. The next motion change
-should therefore not ask “how can more things move?” It should ask:
+should therefore not ask 「how can more things move?」 It should ask:
 
 > Can a reader see the direction of one real relationship immediately, without
 > turning the whole technical diagram into an ambient screensaver?

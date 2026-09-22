@@ -134,13 +134,13 @@ test('start page: offers five bounded bilingual starts without ingesting source 
   }
   assert.match(html, /data-en="Describe it\."/);
   assert.match(html, /data-en="Archify maps it\."/);
-  assert.match(html, /data-zh="直接说，"/);
-  assert.match(html, /data-zh="Archify 就能画。"/);
+  assert.match(html, /data-zh="直接說，"/);
+  assert.match(html, /data-zh="Archify 就能畫。"/);
   assert.match(html, /id="copy-starter"/);
   assert.match(html, /data-en="Copy install \+ prompt"/);
-  assert.match(html, /data-zh="复制安装命令 \+ 提示词"/);
+  assert.match(html, /data-zh="複製安裝命令 \+ 提示詞"/);
   assert.match(html, /data-en="No repository is required\./);
-  assert.match(html, /data-zh="不需要绑定代码库。/);
+  assert.match(html, /data-zh="不需要綁定代碼庫。/);
   assert.match(html, /data-input="description"/);
   assert.match(html, /data-input="repository"/);
 

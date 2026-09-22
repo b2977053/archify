@@ -9,7 +9,7 @@ Archify already has motion, three visual presets, guided views, semantic focus, 
 ## Evidence
 
 - `fireworks-tech-graph` puts a verified animated 12-style overview directly in its README and landing-page style section. Motion is not described first; it is shown first.
-- LikeC4 places a real preview beside its source example and leads users from “Write” to “See” to “Ship”. The artifact is part of the explanation, not a distant gallery link.
+- LikeC4 places a real preview beside its source example and leads users from 「Write」 to 「See」 to 「Ship」. The artifact is part of the explanation, not a distant gallery link.
 - React Flow makes the interactive canvas itself the primary product demonstration, then supports it with capability and community proof.
 - Archify's own landing page still used one static screenshot even though the generated Proof Lab already contained 11 live artifacts and 44 passing checks.
 

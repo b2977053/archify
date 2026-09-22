@@ -583,7 +583,7 @@ test('textUnits: ASCII=1, CJK=2, mixed sums, fullwidth supplementary=2', () => {
   assert.equal(textUnits(null), 0);
   assert.equal(textUnits('𠀀'), 2); // CJK Ext-B (supplementary plane)
   assert.equal(textUnits('🚀'), 2); // emoji
-  assert.equal(textUnits('注入提示词'), 10); // issue #14 original label
+  assert.equal(textUnits('注入提示詞'), 10); // issue #14 original label
   assert.equal(textUnits('！＠＃０１２'), 12); // fullwidth punctuation + digits
 });
 
@@ -669,7 +669,7 @@ test('unknown semantic sigils fail closed to a neutral role stamp', () => {
 });
 
 test('suggestLabelObstacleFix includes rects and labelAt/labelDy hints', () => {
-  const labelRect = { x: 100, y: 180, width: 48, height: 14, label: '写入' };
+  const labelRect = { x: 100, y: 180, width: 48, height: 14, label: '寫入' };
   const obstacle = { id: 'memtool', x: 30, y: 130, width: 230, height: 58 };
   const hint = suggestLabelObstacleFix(labelRect, 124, 188, obstacle);
   assert.match(hint, /label rect: \[100, 180, 48, 14\]/);

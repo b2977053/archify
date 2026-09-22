@@ -24,7 +24,7 @@ Skip:
 
 1. No AST parser, repository crawler, knowledge graph, LLM indexing pipeline, IDE extension, or server.
 2. No additional toolbar control or permanent panel.
-3. No generic “source” label that merely repeats an unverified path.
+3. No generic 「source」 label that merely repeats an unverified path.
 4. No private filesystem paths in the artifact, receipt, SVG, raster, Share Card, or WebM.
 
 ## Product contract
@@ -43,4 +43,4 @@ The feature is opt-in and Architecture-only in its first version:
 
 ## Why this slice
 
-It closes a concrete trust gap without disturbing the stable renderer, geometry, export, motion, or interaction contracts. It also gives Archify a better growth sentence than “more diagram styles”: **turn a high-level architecture map into a revision-pinned doorway to the code that proves it.**
+It closes a concrete trust gap without disturbing the stable renderer, geometry, export, motion, or interaction contracts. It also gives Archify a better growth sentence than 「more diagram styles」: **turn a high-level architecture map into a revision-pinned doorway to the code that proves it.**

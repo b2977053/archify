@@ -16,7 +16,7 @@ Archify should **not** add another minimap, another semantic-zoom layer, or anot
 
 The next useful gap is narrower:
 
-> After Route Probe answers “what is the shortest directed route?”, let the reader inspect that answer one hop at a time without losing the complete path.
+> After Route Probe answers 「what is the shortest directed route?」, let the reader inspect that answer one hop at a time without losing the complete path.
 
 The recommended slice is **Route Journey**. It reuses the existing Route Probe panel, ordered `activeNodeIds`, exact ordered `activeEdges`, Semantic Camera, one-shot route signal, Motion Governor, route hash, and export cleanup. It adds no new panel, graph model, schema field, dependency, storage, service, layout algorithm, or editor behavior. The complete path remains statically visible at all times. One optional, explicitly started journey may move a current-step emphasis from source to destination. The reader can pause, resume, go to the previous or next position, or activate any route-position chip directly. Still mode and reduced-motion readers retain the same discrete controls but no automatic progression or camera animation. An optional author-controlled relationship ID plus direct relation permalink is a sound **later** foundation, but it is not the best next comprehension slice. It improves sharing and durable identity, not immediate understanding of a multi-hop result.
 
@@ -85,8 +85,8 @@ Its current node chips are non-interactive `span` elements. That is the concrete
 
 Story Beats traverse an **authored named chapter** from `meta.views[].focus`. They preserve authorial narrative order even when adjacent stops have reverse, missing, grouped, or multiple relationship truth. Route Probe instead answers an **ad hoc reader question** between two chosen nodes and guarantees a directed BFS result. Route Journey therefore has a distinct boundary:
 
-- Story Beat: “tell me the authored explanation.”
-- Route Journey: “walk me through the exact route I just asked for.”
+- Story Beat: 「tell me the authored explanation.」
+- Route Journey: 「walk me through the exact route I just asked for.」
 
 Route Journey must not create a chapter, mutate `meta.views`, add a story beat, or reuse story URLs.
 
@@ -344,7 +344,7 @@ Visibility restoration does not resume. The reader must activate Play again. Use
 
 ### 10. URL contract remains endpoint-only
 
-Keep `#route=<source>~<target>` unchanged. The URL means “show this deterministic route.” It does not mean “play it” or “restore step 4.” Copy link while paused or playing still copies only the endpoint route. Reload restores the complete static route with no active journey position and no autoplay. Do not add `step`, numeric edge key, camera, dwell, playback, or pause state to the hash.
+Keep `#route=<source>~<target>` unchanged. The URL means 「show this deterministic route.」 It does not mean 「play it」 or 「restore step 4.」 Copy link while paused or playing still copies only the endpoint route. Reload restores the complete static route with no active journey position and no autoplay. Do not add `step`, numeric edge key, camera, dwell, playback, or pause state to the hash.
 
 ## Five-renderer compatibility
 

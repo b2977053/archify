@@ -80,7 +80,7 @@ The implementation also models strong overlay ownership:
   ([overlay and clone preparation](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/scripts/svg2gif.js#L822-L919),
   [frame guard](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/scripts/svg2gif.js#L2337-L2351)).
 
-Its “finite capture” is real but should not be misread as finite playback. Frame
+Its 「finite capture」 is real but should not be misread as finite playback. Frame
 selection is bounded to `0..renderedFrameMax`, the renderer caps a request at 500
 frames and 600 million rendered pixels, but the produced GIF still loops
 infinitely
@@ -107,7 +107,7 @@ an ambient loop
 [action that owns the animation](https://github.com/antvis/G6/blob/7b7ff8e2b52609486840963dc1608d9f565e7f66/packages/site/examples/animation/basic/demo/enter-edge-path-in.js#L36-L57)).
 
 **Archify inference:** Relationship Preview entry is the owning lifecycle stage.
-No durable “animation selected” state is needed once the pulse completes.
+No durable 「animation selected」 state is needed once the pulse completes.
 
 ### 3. yFiles: decorate the graph; do not mutate it
 
@@ -237,7 +237,7 @@ Reject all three obvious variants:
 ### Later, only if evidence demands it
 
 If usability testing shows that readers deliberately want repeated direction
-inspection, add at most **one contextual “Replay direction” action** in the Lens
+inspection, add at most **one contextual 「Replay direction」 action** in the Lens
 header or preview footer while a relationship is active. It must not be repeated
 inside every row, must remain a separate valid button, and must not be required to
 understand the relationship. Instrumented demand or repeated user reports should
@@ -249,7 +249,7 @@ precede this addition.
 2. Preview entry resolves the exact existing `data-edge-key`; it never guesses by
    endpoint pair or label.
 3. Motion direction always follows compiled `data-edge-from → data-edge-to`, even
-   for an incoming row. “Incoming to the focused node” must not reverse the
+   for an incoming row. 「Incoming to the focused node」 must not reverse the
    authored path.
 4. Create at most one runtime `<g>` owned by Relationship Preview. It is
    `aria-hidden`, pointer-transparent, and inserted in the established edge
@@ -396,6 +396,6 @@ precede this addition.
 ## Expected reader outcome
 
 The diagram should feel alive only when life answers a question. A reader moves
-onto “writes orders → PostgreSQL”, sees one packet travel along that exact real
+onto 「writes orders → PostgreSQL」, sees one packet travel along that exact real
 edge toward PostgreSQL, and then the diagram becomes still again. The motion
 confirms direction; the stable graph remains the product.

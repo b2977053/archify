@@ -167,7 +167,7 @@ Sources:
 - [Structurizr diagram editor](https://docs.structurizr.com/ui/diagrams/editor)
 - [Structurizr automatic layout](https://docs.structurizr.com/ui/diagrams/automatic-layout)
 
-**Borrow:** a failed route needs a repair path, not a generic “invalid layout”
+**Borrow:** a failed route needs a repair path, not a generic 「invalid layout」
 message.
 **Adapt:** Archify's receipt should point directly to `via`, `route`,
 `fromSide`, `toSide`, or the renderer's placement controls.
@@ -243,7 +243,7 @@ The gate must not treat the following as semantic node obstacles:
 - edge labels, because existing renderer-specific label collision rules remain
   the owner of label geometry in this slice.
 
-Container boundaries are not “ignored because they do not matter.” They are
+Container boundaries are not 「ignored because they do not matter.」 They are
 exempt because crossing them can be semantically necessary and Archify has no
 open-gap/container-port model yet. Existing boundary-bounds and legend
 clearance checks remain intact.

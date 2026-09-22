@@ -15,7 +15,7 @@
   <a href="#start"><strong>Get started</strong></a> &nbsp;·&nbsp;
   <a href="https://tt-a1i.github.io/archify/guide.html"><strong>Scenario guide</strong></a> &nbsp;·&nbsp;
   <a href="#community"><strong>Community</strong></a> &nbsp;·&nbsp;
-  <a href="./README_ZH.md"><strong>简体中文</strong></a>
+  <a href="./README_ZH.md"><strong>簡體中文</strong></a>
 </p>
 
 <p align="center">
@@ -64,7 +64,7 @@ Use Archify to diagram a web request: Browser calls the API,
 the API checks Redis, and a cache miss queries PostgreSQL and fills the cache.
 ```
 
-Then continue: “Add authentication”, “Highlight the cache-miss path”, or “Switch to the light theme”.
+Then continue: 「Add authentication」, 「Highlight the cache-miss path」, or 「Switch to the light theme」.
 
 **No repository is required:** start with a description, or ask your agent to read a repository for a source-backed architecture diagram.
 
@@ -127,7 +127,7 @@ The output is a self-contained HTML file. Download it and open it in your browse
 
 ## Community and recognition
 
-- **#1 on GitHub Trending's weekly, all-language repository list.** [Ranking screenshot published by the creator on September 1, 2026](https://x.com/t20000622yy/status/2094656813576880285), with all languages and “This week” selected.
+- **#1 on GitHub Trending's weekly, all-language repository list.** [Ranking screenshot published by the creator on September 1, 2026](https://x.com/t20000622yy/status/2094656813576880285), with all languages and 「This week」 selected.
 - **Featured and interviewed by QbitAI.** [Project feature](https://www.qbitai.com/2026/09/482469.html) · [The developer's story](https://www.qbitai.com/2026/09/488519.html).
 - **Shared with developer communities.** [midudev's post](https://x.com/midudev/status/2094425974406320207).
 
@@ -332,7 +332,7 @@ Settings:
 }
 ```
 
-`meta.locale=en|zh-CN` localizes page title, Legend, states/errors, a11y, HTML/SVG `lang`—never authored content. Otherwise omit; preserve requested-language copy; disclose English fallback. Static omits `animation`; `classic` defaults.
+`meta.locale=en|zh-TW` localizes page title, Legend, states/errors, a11y, HTML/SVG `lang`—never authored content. Otherwise omit; preserve requested-language copy; disclose English fallback. Static omits `animation`; `classic` defaults.
 
 </details>
 

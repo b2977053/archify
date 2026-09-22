@@ -11,7 +11,7 @@ Archify could play named guided views and let Semantic Camera frame each selecti
 - [React Flow's Edge API](https://reactflow.dev/api-reference/types/edge) scopes animation to an individual edge instead of making motion a canvas-wide property.
 - [React Flow's animated-edge examples](https://reactflow.dev/examples/edges/animating-edges) reuse the actual computed edge path for SVG motion and keep the path definition separate from the animation lifecycle.
 
-The useful borrowing is not “make every line move.” It is **bind motion to the exact semantic subgraph currently being explained**.
+The useful borrowing is not 「make every line move.」 It is **bind motion to the exact semantic subgraph currently being explained**.
 
 ## Archify decision
 

@@ -121,7 +121,7 @@ test('all README languages show the brand mark and retain the verified animated 
     const readme = fs.readFileSync(path.join(repoRoot, filename), 'utf8');
     const markIndex = readme.indexOf('docs/assets/archify-lockup-light.svg');
     const proofIndex = readme.indexOf('docs/assets/archify-live-proof.gif');
-    const demosIndex = Math.max(readme.indexOf('## See Archify in action'), readme.indexOf('## 看看 Archify 能做什么'));
+    const demosIndex = Math.max(readme.indexOf('## See Archify in action'), readme.indexOf('## 看看 Archify 能做什麼'));
     assert.ok(markIndex >= 0 && markIndex < demosIndex, `${filename}: brand lockup is missing before the demos`);
     assert.ok(proofIndex > demosIndex, `${filename}: animated proof must live in the demo section`);
     assert.match(readme, /docs\/assets\/archify-live-proof\.gif/);
@@ -183,9 +183,9 @@ test('README demos use checked-in captures and live deep links below the existin
     const readme = fs.readFileSync(path.join(repoRoot, filename), 'utf8');
     const markIndex = readme.indexOf('docs/assets/archify-lockup-light.svg');
     const proofIndex = readme.indexOf('docs/assets/archify-live-proof.gif');
-    const previewIndex = Math.max(readme.indexOf('## Preview'), readme.indexOf('## 预览'));
-    const demosIndex = Math.max(readme.indexOf('## See Archify in action'), readme.indexOf('## 看看 Archify 能做什么'));
-    const quickStartIndex = Math.max(readme.indexOf('## Quick start'), readme.indexOf('## 快速开始'));
+    const previewIndex = Math.max(readme.indexOf('## Preview'), readme.indexOf('## 預覽'));
+    const demosIndex = Math.max(readme.indexOf('## See Archify in action'), readme.indexOf('## 看看 Archify 能做什麼'));
+    const quickStartIndex = Math.max(readme.indexOf('## Quick start'), readme.indexOf('## 快速開始'));
     assert.ok(markIndex >= 0 && markIndex < demosIndex, `${filename}: brand mark must precede the demos`);
     assert.ok(demosIndex < previewIndex && previewIndex < quickStartIndex, `${filename}: demo section is misplaced`);
     assert.ok(demosIndex < proofIndex && proofIndex < previewIndex, `${filename}: animated proof is outside the demo section`);
@@ -220,7 +220,7 @@ test('README preserves the visual proof set and key content', () => {
     const supercode = readme.indexOf('https://supercode.sh/?utm_source=archify');
     const evermind = readme.indexOf('docs/assets/sponsors/evermind-archify-raven.png');
     assert.ok(supercode >= 0 && evermind > supercode, `${filename}: EverMind must follow Supercode`);
-    assert.match(readme, filename === 'README_ZH.md' ? /不需要绑定代码库/ : /No repository is required/);
+    assert.match(readme, filename === 'README_ZH.md' ? /不需要綁定代碼庫/ : /No repository is required/);
     for (const asset of commonAssets) {
       assert.ok(readme.includes(`docs/assets/${asset}`), `${filename}: visual proof ${asset} was removed`);
     }
@@ -236,7 +236,7 @@ test('all README languages end with the self-hosted star history chart', () => {
   for (const filename of ['README.md', 'README_EN.md', 'README_ZH.md']) {
     const readme = fs.readFileSync(path.join(repoRoot, filename), 'utf8');
     const sectionIndex = readme.lastIndexOf('## Star History');
-    const contributingIndex = Math.max(readme.indexOf('## Contributing'), readme.indexOf('## 参与贡献'));
+    const contributingIndex = Math.max(readme.indexOf('## Contributing'), readme.indexOf('## 參與貢獻'));
     assert.ok(sectionIndex > contributingIndex, `${filename}: Star History must follow Contributing`);
     assert.ok(readme.includes(lightChart), `${filename}: missing light star history chart`);
     assert.ok(readme.includes(darkChart), `${filename}: missing dark star history chart`);

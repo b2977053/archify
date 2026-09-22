@@ -228,8 +228,8 @@ Relationship presentation is fail-closed:
 3. Exactly one reverse edge and no forward edge: `reverse`; emphasize it and
    signal in its authored source→target direction, even though the narrative is
    walking the pair in reverse.
-4. No exact edge: `group`; emphasize the active node only and state “grouped · no
-   direct authored relationship.”
+4. No exact edge: `group`; emphasize the active node only and state 「grouped · no
+   direct authored relationship.」
 5. Multiple or bidirectional exact edges: `multiple`; emphasize all matching
    authored edges statically, report their exact count, and do not choose an
    arbitrary moving path.
@@ -239,7 +239,7 @@ They must not acquire a beat number merely because both endpoints appear in the
 chapter. This tightens the current overlay rule: only exact adjacent focus pairs
 may receive a Story beat step.
 
-The Story state never means graph mutation. “Past”, “current”, and “upcoming” are
+The Story state never means graph mutation. 「Past」, 「current」, and 「upcoming」 are
 narrative positions only. Human copy must not say created, added, deleted,
 removed, deployed, or destroyed.
 
@@ -248,9 +248,9 @@ removed, deployed, or destroyed.
 1. Render every resolved Story stop as a native `button type="button"` with its
    visible two-digit position and display label. Keep the current horizontal
    Story Trail; add no panel and no slider.
-2. Group the controls under the existing “Story trail” label. Each button has an
-   accessible name such as “Story beat 3 of 8: Planner. From Chat through one
-   authored forward relationship.”
+2. Group the controls under the existing 「Story trail」 label. Each button has an
+   accessible name such as 「Story beat 3 of 8: Planner. From Chat through one
+   authored forward relationship.」
 3. Focus changes button styling and pauses active playback once, but does not
    select a beat. Only click, tap, Enter, or Space changes the playhead.
 4. Manual activation calls the same `setStoryBeat` writer used by automatic

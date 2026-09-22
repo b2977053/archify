@@ -19,8 +19,8 @@ Anchor Chapter Handoff path.
 
 This is worthwhile because the substrate and the user need are both real:
 
-- the Named Chapter Rail currently exposes only `N stops`, so it answers “how
-  large is this chapter?” but not “what changes if I go there?”;
+- the Named Chapter Rail currently exposes only `N stops`, so it answers 「how
+  large is this chapter?」 but not 「what changes if I go there?」;
 - across the 11 current Proof Lab artifacts, the 22 forward adjacent transitions
   contain **19 shared-ID transitions and 3 no-shared-ID transitions**;
 - direct rail navigation also matters: the three chapters in each Proof produce
@@ -355,7 +355,7 @@ renderers inherit one implementation:
 ## Risks and non-goals
 
 The principal product risk is semantic misreading: `leave` can sound like a node
-was deleted. Repeating “focus delta” in the strip and accessible copy, keeping the
+was deleted. Repeating 「focus delta」 in the strip and accessible copy, keeping the
 active rail state unchanged, and forbidding graph-mutation vocabulary contain
 that risk. The main runtime risks are stale hover timers, focus/pointer ownership
 collisions, an Escape handler falling through to Show all, and preview attributes

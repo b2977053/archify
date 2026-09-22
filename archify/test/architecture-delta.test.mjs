@@ -138,7 +138,7 @@ test('compare reports brand-only changes in the receipt and exact review target'
 
 test('compare reports locale-only changes as presentation changes', () => {
   const head = read(baseFixture);
-  head.meta.locale = 'zh-CN';
+  head.meta.locale = 'zh-TW';
   const headPath = path.join(tmp, 'locale-head.json');
   const output = path.join(tmp, 'locale-delta.html');
   fs.writeFileSync(headPath, JSON.stringify(head));
@@ -621,7 +621,7 @@ for (const side of ['base', 'head']) {
       fs.writeFileSync(output, 'trusted html');
       fs.writeFileSync(receiptPath, 'trusted receipt');
       const preload = path.join(caseRoot, 'replace-after-read.cjs');
-      // 在首次读取返回时替换原文件，避免依赖定时竞争或平台专用 FIFO。
+      // 在首次讀取返回時替換原文件，避免依賴定時競爭或平臺專用 FIFO。
       fs.writeFileSync(preload, `
         const fs = require('node:fs');
         const originalRead = fs.readFileSync;

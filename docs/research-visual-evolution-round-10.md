@@ -2,7 +2,7 @@
 
 ## Reader problem
 
-Archify could already focus a node and highlight its one-hop neighborhood, but the reader still had to decode arrow direction and small edge labels directly from the canvas. Focus answered “what is near this node?” without answering “what comes in, what leaves, what is the relationship called, and where can I go next?”
+Archify could already focus a node and highlight its one-hop neighborhood, but the reader still had to decode arrow direction and small edge labels directly from the canvas. Focus answered 「what is near this node?」 without answering 「what comes in, what leaves, what is the relationship called, and where can I go next?」
 
 ## Patterns worth borrowing
 

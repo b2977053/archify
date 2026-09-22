@@ -88,7 +88,7 @@ This installer smoke alone proves **install-path and packaged-runtime compatibil
 |---|---|---|---|
 | Global | Current CLI resolves Cursor to `~/.agents/skills/archify`; Cursor officially scans that root. | A shell-capable Skill becomes available in every project; update timing is user-wide. | Default for an individual who wants Archify everywhere. Say exactly what scope it grants. |
 | Project | Installs `.agents/skills/archify` plus `skills-lock.json` in the current repository. | The copied Skill is a substantial repository diff if committed, and can become stale relative to upstream. | Offer as the team/reproducible option, not as a silent default. |
-| Default symlink mode | For multiple agents, keeps a canonical copy and creates agent links. For Cursor alone, canonical and agent project paths coincide, so the installed Skill is a real directory, not a live link to GitHub. | “Symlink” may be misread as automatic upstream updates; cross-platform links can fail. | Keep as an advanced/default-CLI behavior, but do not promise automatic updates. |
+| Default symlink mode | For multiple agents, keeps a canonical copy and creates agent links. For Cursor alone, canonical and agent project paths coincide, so the installed Skill is a real directory, not a live link to GitHub. | 「Symlink」 may be misread as automatic upstream updates; cross-platform links can fail. | Keep as an advanced/default-CLI behavior, but do not promise automatic updates. |
 | `--copy` | Writes an independent Skill tree directly to the resolved Cursor path. | Multiple agent copies can drift and must be reinstalled/updated independently. | Use in the one-line Cursor command for predictable, reviewable files and parity with the tested smoke. |
 
 Regardless of method, tell users that skills execute with the agent's permissions and should be reviewed before use; the official CLI prints this warning after installation.
@@ -97,23 +97,23 @@ Regardless of method, tell users that skills execute with the agent's permission
 
 ### Defensible now
 
-- “Cursor supports Agent Skills in its Editor and CLI.”
-- “Install Archify for Cursor with `--agent cursor`; use `.agents/skills/archify` for a project or a Cursor-supported global Skill root for user scope.”
-- “The installed Archify package passes `doctor`, validation, and checked HTML delivery without `npm install`, provided Node.js 18+ is available.”
-- “Archify uses the same portable `SKILL.md` and renderer contract across Cursor, Claude, Codex, and opencode.”
+- 「Cursor supports Agent Skills in its Editor and CLI.」
+- 「Install Archify for Cursor with `--agent cursor`; use `.agents/skills/archify` for a project or a Cursor-supported global Skill root for user scope.」
+- 「The installed Archify package passes `doctor`, validation, and checked HTML delivery without `npm install`, provided Node.js 18+ is available.」
+- 「Archify uses the same portable `SKILL.md` and renderer contract across Cursor, Claude, Codex, and opencode.」
 
 ### Claims to continue avoiding
 
-- “Fully tested across Cursor” or “all Cursor models produce the same visual quality.” One dated Cursor Agent environment passed; broader versions and models were not benchmarked.
-- “Try without installing via `npx skills use ... --agent cursor`.” Current `skills` explicitly rejects interactive Cursor launch.
-- “The global CLI command installs to `~/.cursor/skills/archify`.” The current implementation resolves Cursor as universal and may use `~/.agents/skills/archify`.
-- “Cursor's Remote Rule UI imports Archify correctly from the bare repository URL.” Cursor documents the UI, but not nested Skill selection; Archify's actual Skill lives under `archify/`.
-- “The Skill updates automatically.” Both CLI modes create a local copy somewhere; updates require an explicit CLI update/reinstall or an independently managed checkout.
+- 「Fully tested across Cursor」 or 「all Cursor models produce the same visual quality.」 One dated Cursor Agent environment passed; broader versions and models were not benchmarked.
+- 「Try without installing via `npx skills use ... --agent cursor`.」 Current `skills` explicitly rejects interactive Cursor launch.
+- 「The global CLI command installs to `~/.cursor/skills/archify`.」 The current implementation resolves Cursor as universal and may use `~/.agents/skills/archify`.
+- 「Cursor's Remote Rule UI imports Archify correctly from the bare repository URL.」 Cursor documents the UI, but not nested Skill selection; Archify's actual Skill lives under `archify/`.
+- 「The Skill updates automatically.」 Both CLI modes create a local copy somewhere; updates require an explicit CLI update/reinstall or an independently managed checkout.
 
 ## What close peers teach us
 
 - **GitNexus** turns editor support into an explicit product path: `npx gitnexus setup` auto-detects editors, while `gitnexus setup -c cursor,codex` makes the chosen integrations auditable; its README publishes a Cursor support row instead of relying on generic compatibility language.[GitNexus quick start](https://github.com/abhigyanpatwari/GitNexus/blob/cdbdf219dce797e51cdeb8cfa386e77ab2d35628/README.md#L50-L58) · [GitNexus editor setup](https://github.com/abhigyanpatwari/GitNexus/blob/cdbdf219dce797e51cdeb8cfa386e77ab2d35628/README.md#L201-L210) **Recommendation:** give Cursor its own visible selector/command and acceptance row, without adding an Archify setup daemon.
-- **Fireworks Tech Graph** pins a known `skills` version, uses the real nested Skill path, targets agents explicitly, chooses copy mode, documents exact resulting directories, and tells users when runtime restart may be needed.[Fireworks install contract](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/README.md#L193-L205) · [Fireworks discovery/update note](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/README.md#L248-L256) **Recommendation:** use explicit `--skill archify --agent cursor --copy --yes`, pin only in tests, and offer “start a new Cursor Agent session if the Skill is not yet visible” as a conservative troubleshooting note rather than an official hard requirement.
+- **Fireworks Tech Graph** pins a known `skills` version, uses the real nested Skill path, targets agents explicitly, chooses copy mode, documents exact resulting directories, and tells users when runtime restart may be needed.[Fireworks install contract](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/README.md#L193-L205) · [Fireworks discovery/update note](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/README.md#L248-L256) **Recommendation:** use explicit `--skill archify --agent cursor --copy --yes`, pin only in tests, and offer 「start a new Cursor Agent session if the Skill is not yet visible」 as a conservative troubleshooting note rather than an official hard requirement.
 - **GitDiagram** compresses first use to one memorable action—replace `hub` with `diagram` in a GitHub URL—then immediately shows the interactive result.[GitDiagram first-use contract](https://github.com/ahmedkhaleel2004/gitdiagram/blob/041d2feb4a9b1593dcf3bde2ca5b9ae7659becb9/README.md#L6-L20) **Recommendation:** pair the Cursor install command with one bounded prompt and `doctor`/`demo`; do not copy its hosted repository-ingestion model into Archify's local, self-contained trust boundary.
 
 ## Acceptance gates (3–5 tests)

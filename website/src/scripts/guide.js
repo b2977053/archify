@@ -14,9 +14,9 @@
           samples:[['API + cache miss','Show an API request with JWT auth, a Redis cache miss, database fallback, and async tracing.'],['Kafka + DLQ','Map Kafka topics, ordered processors, consumer groups, replay, state stores, and the dead-letter queue.'],['Incident response','Show how responders detect, triage, mitigate, escalate, communicate, and verify recovery.']]
         },
         zh: {
-          navGuide:'场景指南',navProof:'验证作品集',navStart:'快速上手',navInstall:'安装技能',versionLabel:'场景指南 / 开发版 / v[[ARCHIFY_VERSION]]',eyebrow:'先问题，后图表',headline:'先选对问题，<br>再得到<em>对的图。</em>',lede:'描述受众真正需要理解的内容。Archify 会推荐一个有边界的视觉配方，同时给出证据清单、禁用条件和可复制提示词。',
-          metricRecipes:'个真实场景<br>配方',metricModes:'种类型化<br>图表模式',metricRuntime:'个运行时<br>依赖',chooserTitle:'这张图必须解释什么？',chooserBody:'写清场景，不要只写图表类型。系统事实越具体，推荐越可靠。',placeholder:'例如：展示带 JWT 鉴权、Redis 缓存未命中、数据库回退和异步追踪的 API 请求。',recommend:'推荐配方 →',clear:'清空',libraryEyebrow:'配方库',libraryTitle:'十一个小而专的起点。',libraryBody:'每个配方只回答一个技术问题。清晰的边界让图更易读、可评审，也不会掩盖证据缺口。',footerLeft:'网页与 Archify CLI 使用同一份配方数据生成。',all:'全部配方',recommended:'推荐配方',use:'适合',avoid:'不要这样用',must:'必须包含的证据',presentation:'表现建议',prompt:'可直接复制的提示词',copyPrompt:'复制提示词',copied:'已复制',alternatives:'其他可能：',confidence:'置信度',open:'打开配方',proofReady:'已验证成品',proofLink:'打开验证成品 ↗',
-          samples:[['API + 缓存未命中','展示带 JWT 鉴权、Redis 缓存未命中、数据库回退和异步追踪的 API 请求。'],['Kafka + 死信','梳理 Kafka Topic、有序处理器、消费者组、重放、状态存储和死信队列。'],['事故处置','展示响应者如何发现、分诊、缓解、升级、沟通并验证恢复。']]
+          navGuide:'場景指南',navProof:'驗證作品集',navStart:'快速上手',navInstall:'安裝技能',versionLabel:'場景指南 / 開發版 / v[[ARCHIFY_VERSION]]',eyebrow:'先問題，後圖表',headline:'先選對問題，<br>再得到<em>對的圖。</em>',lede:'描述受眾真正需要理解的內容。Archify 會推薦一個有邊界的視覺配方，同時給出證據清單、禁用條件和可複製提示詞。',
+          metricRecipes:'個真實場景<br>配方',metricModes:'種類型化<br>圖表模式',metricRuntime:'個運行時<br>依賴',chooserTitle:'這張圖必須解釋什麼？',chooserBody:'寫清場景，不要只寫圖表類型。系統事實越具體，推薦越可靠。',placeholder:'例如：展示帶 JWT 鑑權、Redis 緩存未命中、資料庫回退和異步追蹤的 API 請求。',recommend:'推薦配方 →',clear:'清空',libraryEyebrow:'配方庫',libraryTitle:'十一個小而專的起點。',libraryBody:'每個配方只回答一個技術問題。清晰的邊界讓圖更易讀、可評審，也不會掩蓋證據缺口。',footerLeft:'網頁與 Archify CLI 使用同一份配方數據生成。',all:'全部配方',recommended:'推薦配方',use:'適合',avoid:'不要這樣用',must:'必須包含的證據',presentation:'表現建議',prompt:'可直接複製的提示詞',copyPrompt:'複製提示詞',copied:'已複製',alternatives:'其他可能：',confidence:'置信度',open:'打開配方',proofReady:'已驗證成品',proofLink:'打開驗證成品 ↗',
+          samples:[['API + 緩存未命中','展示帶 JWT 鑑權、Redis 緩存未命中、資料庫回退和異步追蹤的 API 請求。'],['Kafka + 死信','梳理 Kafka Topic、有序處理器、消費者組、重放、狀態存儲和死信隊列。'],['事故處置','展示響應者如何發現、分診、緩解、升級、溝通並驗證恢復。']]
         }
       };
 
@@ -41,7 +41,7 @@
         document.getElementById('samples').innerHTML = t('samples').map(function (sample) { return '<button class="chip" type="button" data-query="'+escapeHtml(sample[1])+'">'+escapeHtml(sample[0])+'</button>'; }).join('');
       }
       function renderFilters() {
-        var labels = {"en":{"architecture":"Architecture","workflow":"Workflow","sequence":"Sequence","dataflow":"Data flow","lifecycle":"Lifecycle"},"zh":{"architecture":"架构图","workflow":"工作流","sequence":"时序图","dataflow":"数据流","lifecycle":"生命周期"}};
+        var labels = {"en":{"architecture":"Architecture","workflow":"Workflow","sequence":"Sequence","dataflow":"Data flow","lifecycle":"Lifecycle"},"zh":{"architecture":"架構圖","workflow":"工作流","sequence":"時序圖","dataflow":"數據流","lifecycle":"生命周期"}};
         document.getElementById('filters').innerHTML = ['all'].concat(types).map(function (type) { return '<button class="filter '+(activeType === type ? 'active':'')+'" type="button" data-filter="'+type+'">'+escapeHtml(type === 'all' ? t('all') : labels[language][type])+'</button>'; }).join('');
       }
       function renderCards() {
@@ -71,9 +71,9 @@
       }
       function applyLanguage(next) {
         language = ArchifySiteLanguage.write(next);
-        document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+        document.documentElement.lang = language === 'zh' ? 'zh-TW' : 'en';
         document.getElementById('language').textContent = language === 'zh' ? 'EN' : '中文';
-        document.getElementById('language').setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
+        document.getElementById('language').setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切換到中文');
         document.querySelectorAll('[data-en][data-zh]').forEach(function (node) { node.textContent=node.getAttribute(language === 'zh' ? 'data-zh' : 'data-en'); });
         document.querySelectorAll('[data-i18n]').forEach(function (node) { node.textContent=t(node.dataset.i18n); });
         document.querySelectorAll('[data-i18n-html]').forEach(function (node) { node.innerHTML=t(node.dataset.i18nHtml); });

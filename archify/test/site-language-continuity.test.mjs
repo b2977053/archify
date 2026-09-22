@@ -309,8 +309,8 @@ test('all site pages consume one language runtime and one navigation contract', 
 
 test('site page identity paths localize with the selected language', () => {
   const pages = [
-    { paths: ['scripts/guide-template.html', 'docs/guide.html'], en: '/ guide', zh: '/ 场景指南' },
-    { paths: ['scripts/gallery-template.html', 'docs/gallery.html'], en: '/ proof lab', zh: '/ 验证作品集' },
+    { paths: ['scripts/guide-template.html', 'docs/guide.html'], en: '/ guide', zh: '/ 場景指南' },
+    { paths: ['scripts/gallery-template.html', 'docs/gallery.html'], en: '/ proof lab', zh: '/ 驗證作品集' },
     { paths: ['scripts/start-template.html', 'docs/start.html'], en: '/ start', zh: '/ 快速上手' },
   ];
 
@@ -408,7 +408,7 @@ test('real Chrome preserves language through entry, navigation, selection, refre
     assert.deepEqual(await evaluate(browser, sessionId, `({
       language: document.documentElement.lang,
       stored: localStorage.getItem('archify-lang')
-    })`), { language: 'zh-CN', stored: 'zh' });
+    })`), { language: 'zh-TW', stored: 'zh' });
 
     await evaluate(browser, sessionId, 'localStorage.clear()');
     await navigate(browser, sessionId, `${baseUrl}/index.html?lang=zh&utm_source=browser-test#proof`);
@@ -421,15 +421,15 @@ test('real Chrome preserves language through entry, navigation, selection, refre
       hash: location.hash
     })`);
     assert.deepEqual(state, {
-      language: 'zh-CN', stored: 'zh', langQuery: null, campaign: 'browser-test', hash: '#proof',
+      language: 'zh-TW', stored: 'zh', langQuery: null, campaign: 'browser-test', hash: '#proof',
     });
 
     await clickAndNavigate(browser, sessionId, '.site-nav a[href="gallery.html"]');
-    assert.equal(await evaluate(browser, sessionId, 'document.documentElement.lang'), 'zh-CN');
-    assert.equal(await evaluate(browser, sessionId, 'document.querySelector(".nav-logo-path").textContent'), '/ 验证作品集');
+    assert.equal(await evaluate(browser, sessionId, 'document.documentElement.lang'), 'zh-TW');
+    assert.equal(await evaluate(browser, sessionId, 'document.querySelector(".nav-logo-path").textContent'), '/ 驗證作品集');
     assert.deepEqual(await evaluate(browser, sessionId, `Array.from(document.querySelectorAll('[data-filter]')).map(function (button) {
       return button.textContent;
-    })`), ['全部配方 / 11', '架构图', '工作流', '时序图', '数据流', '生命周期']);
+    })`), ['全部配方 / 11', '架構圖', '工作流', '時序圖', '數據流', '生命周期']);
 
     await evaluate(browser, sessionId, 'document.querySelector(\'[data-filter="architecture"]\').click()');
     state = await evaluate(browser, sessionId, `({
@@ -442,7 +442,7 @@ test('real Chrome preserves language through entry, navigation, selection, refre
       })
     })`);
     assert.deepEqual(state, {
-      language: 'zh-CN', selected: 'true', typeQuery: 'architecture', visibleCount: 2, onlyArchitecture: true,
+      language: 'zh-TW', selected: 'true', typeQuery: 'architecture', visibleCount: 2, onlyArchitecture: true,
     });
 
     let loaded = browser.cdp.waitFor('Page.loadEventFired', sessionId);
@@ -452,7 +452,7 @@ test('real Chrome preserves language through entry, navigation, selection, refre
       language: document.documentElement.lang,
       selected: document.querySelector('[data-filter="architecture"]').getAttribute('aria-pressed'),
       visibleCount: document.querySelectorAll('.showcase-card:not([hidden])').length
-    })`), { language: 'zh-CN', selected: 'true', visibleCount: 2 });
+    })`), { language: 'zh-TW', selected: 'true', visibleCount: 2 });
 
     await evaluate(browser, sessionId, 'document.getElementById("language").click()');
     assert.equal(await evaluate(browser, sessionId, 'document.documentElement.lang'), 'en');
@@ -475,11 +475,11 @@ test('real Chrome preserves language through entry, navigation, selection, refre
       langQuery: new URL(location.href).searchParams.get('lang'),
       hash: location.hash
     })`);
-    assert.deepEqual(state, { language: 'zh-CN', stored: 'zh', langQuery: null, hash: '#recipes' });
-    assert.equal(await evaluate(browser, sessionId, 'document.querySelector(".nav-logo-path").textContent'), '/ 场景指南');
+    assert.deepEqual(state, { language: 'zh-TW', stored: 'zh', langQuery: null, hash: '#recipes' });
+    assert.equal(await evaluate(browser, sessionId, 'document.querySelector(".nav-logo-path").textContent'), '/ 場景指南');
     assert.deepEqual(await evaluate(browser, sessionId, `Array.from(document.querySelectorAll('#filters [data-filter]')).map(function (button) {
       return button.textContent;
-    })`), ['全部配方', '架构图', '工作流', '时序图', '数据流', '生命周期']);
+    })`), ['全部配方', '架構圖', '工作流', '時序圖', '數據流', '生命周期']);
 
     await evaluate(browser, sessionId, 'document.querySelector(\'#filters [data-filter="sequence"]\').click()');
     state = await evaluate(browser, sessionId, `({
@@ -494,15 +494,15 @@ test('real Chrome preserves language through entry, navigation, selection, refre
       })
     })`);
     assert.deepEqual(state, {
-      language: 'zh-CN',
+      language: 'zh-TW',
       selected: true,
       visibleCount: 2,
       onlySequence: true,
-      labels: ['全部配方', '架构图', '工作流', '时序图', '数据流', '生命周期'],
+      labels: ['全部配方', '架構圖', '工作流', '時序圖', '數據流', '生命周期'],
     });
 
     await clickAndNavigate(browser, sessionId, '.site-nav a[href="start.html"]');
-    assert.equal(await evaluate(browser, sessionId, 'document.documentElement.lang'), 'zh-CN');
+    assert.equal(await evaluate(browser, sessionId, 'document.documentElement.lang'), 'zh-TW');
     assert.equal(await evaluate(browser, sessionId, 'new URL(location.href).searchParams.has("lang")'), false);
     assert.equal(await evaluate(browser, sessionId, 'document.querySelector(".nav-logo-path").textContent'), '/ 快速上手');
 

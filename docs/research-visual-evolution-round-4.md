@@ -13,7 +13,7 @@ Five renderer modes are useful only when a user can choose the right one. A type
 
 The official [style-to-diagram matrix](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/main/references/style-diagram-matrix.md) does not treat every style as suitable for every diagram. Its engineering-oriented styles require domain evidence: C4 level and responsibilities, deployment ownership and boundary crossings, event topics and consumer groups, or operational signals and failure paths.
 
-The useful idea is not “add more themes.” It is “pair each visual language with a bounded question and evidence contract.” Archify adopts that principle through scenario recipes while keeping its existing five typed renderers.
+The useful idea is not 「add more themes.」 It is 「pair each visual language with a bounded question and evidence contract.」 Archify adopts that principle through scenario recipes while keeping its existing five typed renderers.
 
 The official [composition quality contract](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/main/references/composition-quality-contract.md) also makes legibility measurable: the showcase profile budgets zero line crossings, no bridges, at most two bends, minimum node spacing, and container gutters. Its fallback is to simplify or split the topology. That reinforces Archify's existing one-main-path and small-view rules.
 
@@ -21,7 +21,7 @@ The official [composition quality contract](https://github.com/yizhiyanhua-ai/fi
 
 Structurizr's official [workspace scope guidance](https://docs.structurizr.com/workspaces/scope) recommends scoping a workspace to a single software system and warns that an all-in-one workspace becomes cluttered. Its [notation guidance](https://docs.structurizr.com/server/diagrams/notation) deliberately uses a small vocabulary of boxes and unidirectional arrows with consistent styling across views.
 
-The useful idea is constraint, not imitation: one technical question per recipe, a stable visual grammar, and explicit “avoid when” copy.
+The useful idea is constraint, not imitation: one technical question per recipe, a stable visual grammar, and explicit 「avoid when」 copy.
 
 ## Product decision
 

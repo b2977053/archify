@@ -70,7 +70,7 @@ launch notes, and narrative technical documentation:
 - muted, accessible semantic colors rather than neon or decorative gradients;
 - low-radius panels and quiet shadows instead of generic glass cards.
 
-It is intentionally not “Notion style” or a Fireworks clone. It aligns with
+It is intentionally not 「Notion style」 or a Fireworks clone. It aligns with
 Archify's own landing-page paper identity and remains recognizable in both dark
 and light themes.
 

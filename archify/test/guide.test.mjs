@@ -38,8 +38,8 @@ test('guide: every recipe has complete English and Chinese decision copy', () =>
 
 test('guide: language detection and localization are deterministic', () => {
   assert.equal(detectGuideLanguage('show an API request'), 'en');
-  assert.equal(detectGuideLanguage('展示 API 请求'), 'zh');
-  assert.equal(listScenarioRecipes('zh')[0].title, '系统总览');
+  assert.equal(detectGuideLanguage('展示 API 請求'), 'zh');
+  assert.equal(listScenarioRecipes('zh')[0].title, '系統總覽');
   assert.equal(listScenarioRecipes('en')[0].title, 'System overview');
 });
 
@@ -47,8 +47,8 @@ test('guide: representative scenarios map to specialized recipes', () => {
   const cases = [
     ['Show an API request with Redis cache miss', 'api-request'],
     ['Show CI/CD build deploy rollback', 'delivery-workflow'],
-    ['展示 Kafka topic 消费者组和死信队列', 'event-stream'],
-    ['梳理 ETL 数仓 PII 数据血缘', 'data-lineage'],
+    ['展示 Kafka topic 消費者組和死信隊列', 'event-stream'],
+    ['梳理 ETL 數倉 PII 數據血緣', 'data-lineage'],
     ['deployment lifecycle approval rollback state', 'deployment-lifecycle'],
     ['agent tool call approval gate MCP', 'agent-tool-call'],
   ];

@@ -54,7 +54,7 @@ relationship matching, URL state, or dimming rules into a renderer.
   bridge.
 - [`render-workflow.mjs`](../archify/renderers/workflow/render-workflow.mjs)
   uses five node-kind colors (`frontend`, `backend`, `security`, `messagebus`,
-  `database`) under domain labels such as “User UI” and “Agent logic.” These
+  `database`) under domain labels such as 「User UI」 and 「Agent logic.」 These
   rows can be bridged only when the renderer marks their exact kind.
 - [`render-lifecycle.mjs`](../archify/renderers/lifecycle/render-lifecycle.mjs)
   has exact rows for `active`, `waiting`, `success`, and `failure`, but not for
@@ -80,7 +80,7 @@ The comparison is pinned to
 [`yizhiyanhua-ai/fireworks-tech-graph@50c819d`](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/tree/50c819d68fd4fee330b3010988cd13e98b678d44).
 Its approved interactive architecture artifact keeps the SVG legend as an
 authored `data-graph-role="legend"` group whose entries explain **edge roles**:
-“primary API path,” “prompt / tools,” and “governance”
+「primary API path,」 「prompt / tools,」 and 「governance」
 ([fixed legend source](https://github.com/yizhiyanhua-ai/fireworks-tech-graph/blob/50c819d68fd4fee330b3010988cd13e98b678d44/examples/interactive-architecture.html#L181-L188)).
 Those rows are decorative SVG lines and text, not buttons, filters, or node
 facets.
@@ -178,7 +178,7 @@ meaning, and complete print/export are part of the product.
 **Decision:** legend activation must keep using Semantic Lens's soft emphasis.
 Matched nodes and relationships stay strong; peers preserve context; unrelated
 content recedes but remains spatially present and recoverable. Do not call this
-“Filter” in the UI. Use “Inspect,” “Compare,” or “Lens.”
+「Filter」 in the UI. Use 「Inspect,」 「Compare,」 or 「Lens.」
 
 ### 5. Accessibility requires a real toggle contract, not just a cursor
 
@@ -249,7 +249,7 @@ Change only the diagram's reversible visual state. Explicit activation may open
 the panel and is not a hover disclosure.
 
 Touch has no preview phase: a tap activates the same toggle action as click or
-Space/Enter. No two-tap “first hover, second activate” trap.
+Space/Enter. No two-tap 「first hover, second activate」 trap.
 
 ## Recommended product contract
 
@@ -333,7 +333,7 @@ Space/Enter. No two-tap “first hover, second activate” trap.
 - Edge-semantic legend lenses for Sequence and Data Flow, but only after Archify
   has a normalized compiled `data-edge-kind` contract and a reader problem that
   justifies it. Do not retrofit them through text parsing.
-- A compact “all kinds” inline legend for modes whose current authored legend is
+- A compact 「all kinds」 inline legend for modes whose current authored legend is
   incomplete, if gallery/browser evidence shows users prefer it to the existing
   Lens panel.
 - Optional second-kind hover comparison while one kind is pinned, after the

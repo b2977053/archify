@@ -36,12 +36,12 @@
       }
 
       function updateStaticCopy() {
-        document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+        document.documentElement.lang = language === 'zh' ? 'zh-TW' : 'en';
         document.querySelectorAll('[data-en][data-zh]').forEach(function (element) {
           element.textContent = copyForElement(element);
         });
         languageButton.textContent = language === 'zh' ? 'EN' : '中文';
-        languageButton.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
+        languageButton.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切換到中文');
       }
 
       function updateUrl() {
@@ -121,7 +121,7 @@
         }));
         proofLink.href = 'gallery.html#proof-' + encodeURIComponent(recipe.proof);
         proofMeta.textContent = language === 'zh'
-          ? '验证成品 · ' + recipe.presentation.preset + ' · ' + recipe.presentation.motion
+          ? '驗證成品 · ' + recipe.presentation.preset + ' · ' + recipe.presentation.motion
           : 'Verified proof · ' + recipe.presentation.preset + ' · ' + recipe.presentation.motion;
         copyStatus.textContent = '';
         updateUrl();
@@ -143,8 +143,8 @@
       function starterText() {
         var agentName = document.querySelector('[data-agent="' + agent + '"]').textContent;
         if (language === 'zh') {
-          return '为 ' + agentName + ' 安装 Archify：\n' + installCommand.textContent.trim()
-            + (input === 'description' ? '\n\n然后在任意新对话中直接告诉 ' : '\n\n然后在目标仓库中让 ') + agentName + '：\n' + currentPrompt();
+          return '為 ' + agentName + ' 安裝 Archify：\n' + installCommand.textContent.trim()
+            + (input === 'description' ? '\n\n然後在任意新對話中直接告訴 ' : '\n\n然後在目標倉庫中讓 ') + agentName + '：\n' + currentPrompt();
         }
         return 'Install Archify for ' + agentName + ':\n' + installCommand.textContent.trim()
           + (input === 'description' ? '\n\nThen start any new chat and tell ' : '\n\nThen, in your target repository, ask ') + agentName + ':\n' + currentPrompt();
@@ -155,9 +155,9 @@
           if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(text);
           else fallbackCopy(text);
           if (step) recordStep(step);
-          copyStatus.textContent = language === 'zh' ? '已复制到剪贴板。' : 'Copied to clipboard.';
+          copyStatus.textContent = language === 'zh' ? '已複製到剪貼板。' : 'Copied to clipboard.';
         } catch (_) {
-          copyStatus.textContent = language === 'zh' ? '复制失败，请手动选择文本。' : 'Copy failed. Select the text manually.';
+          copyStatus.textContent = language === 'zh' ? '複製失敗，請手動選擇文本。' : 'Copy failed. Select the text manually.';
         }
       }
 

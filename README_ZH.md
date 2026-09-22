@@ -4,17 +4,17 @@
     <img src="docs/assets/archify-lockup-light.svg" alt="Archify" width="440" height="121" />
   </picture>
 </p>
-<h3 align="center">把你想理解、规划或分享的事，变成可以互动的可视化作品。</h3>
+<h3 align="center">把你想理解、規劃或分享的事，變成可以互動的可視化作品。</h3>
 
-<p align="center">从一个想法、一个问题或一份计划开始。把它描述给 AI Agent，Archify 就能生成可以探索、修改和分享的交互式 HTML。从旅行行程、知识地图到复杂系统，你都可以继续扩展，做成自己需要的样子。</p>
+<p align="center">從一個想法、一個問題或一份計劃開始。把它描述給 AI Agent，Archify 就能生成可以探索、修改和分享的交互式 HTML。從旅行行程、知識地圖到複雜系統，你都可以繼續擴展，做成自己需要的樣子。</p>
 
-<p align="center">看看社区正在创造什么，也想想你还能用它做些什么。</p>
+<p align="center">看看社區正在創造什麼，也想想你還能用它做些什麼。</p>
 
 <p align="center">
   <a href="https://tt-a1i.github.io/archify/gallery.html"><strong>交互演示</strong></a> &nbsp;·&nbsp;
-  <a href="#start"><strong>开始使用</strong></a> &nbsp;·&nbsp;
-  <a href="https://tt-a1i.github.io/archify/guide.html"><strong>场景指南</strong></a> &nbsp;·&nbsp;
-  <a href="#社区交流"><strong>社区交流</strong></a> &nbsp;·&nbsp;
+  <a href="#start"><strong>開始使用</strong></a> &nbsp;·&nbsp;
+  <a href="https://tt-a1i.github.io/archify/guide.html"><strong>場景指南</strong></a> &nbsp;·&nbsp;
+  <a href="#社區交流"><strong>社區交流</strong></a> &nbsp;·&nbsp;
   <a href="./README.md"><strong>English</strong></a>
 </p>
 
@@ -32,232 +32,232 @@
 <p align="center">
   <a href="https://tt-a1i.github.io/archify/"><img src="https://img.shields.io/badge/Website-0891B2?style=for-the-badge" alt="Archify website" /></a>
   <a href="https://discord.gg/6xWMjgCeUq"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Join Archify on Discord" /></a>
-  <a href="#社区交流"><img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" alt="Archify WeChat group" /></a>
-  <a href="#社区交流"><img src="https://img.shields.io/badge/QQ-1688D8?style=for-the-badge&amp;logo=qq&amp;logoColor=white" alt="Archify QQ group" /></a>
+  <a href="#社區交流"><img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" alt="Archify WeChat group" /></a>
+  <a href="#社區交流"><img src="https://img.shields.io/badge/QQ-1688D8?style=for-the-badge&amp;logo=qq&amp;logoColor=white" alt="Archify QQ group" /></a>
   <a href="https://x.com/t20000622yy"><img src="https://img.shields.io/badge/Creator_on_X-181717?style=for-the-badge&amp;logo=x&amp;logoColor=white" alt="Follow the creator on X" /></a>
 </p>
 
-## 看看 Archify 能做什么
+## 看看 Archify 能做什麼
 
 <p align="center">
-  <a href="https://tt-a1i.github.io/archify/gallery.html"><img src="docs/assets/archify-live-proof.gif" alt="三个经过验证的 Archify 成品依次展示 Signal Flow、Blueprint 和 Classic 预设" width="960"/></a>
+  <a href="https://tt-a1i.github.io/archify/gallery.html"><img src="docs/assets/archify-live-proof.gif" alt="三個經過驗證的 Archify 成品依次展示 Signal Flow、Blueprint 和 Classic 預設" width="960"/></a>
   <br/>
-  <sub><strong>三个真实生成、校验通过的成品。</strong> Signal Flow · Blueprint · Classic · <a href="https://tt-a1i.github.io/archify/gallery.html">打开可交互验证作品集 ↗</a></sub>
+  <sub><strong>三個真實生成、校驗通過的成品。</strong> Signal Flow · Blueprint · Classic · <a href="https://tt-a1i.github.io/archify/gallery.html">打開可交互驗證作品集 ↗</a></sub>
 </p>
 
-**点击上方预览，打开真实交互成品。** GIF 展示效果，浏览器中的 HTML 才能点击探索。
+**點擊上方預覽，打開真實交互成品。** GIF 展示效果，瀏覽器中的 HTML 才能點擊探索。
 
 <a id="start"></a>
 
-### 安装，然后说出你的想法
+### 安裝，然後說出你的想法
 
-支持 Cursor、Claude Code、Codex CLI 和 OpenCode；更多接入方式见下方安装选项。
+支持 Cursor、Claude Code、Codex CLI 和 OpenCode；更多接入方式見下方安裝選項。
 
 ```bash
 npx skills add tt-a1i/archify -g
 ```
 
-把这句话发给你的 Agent：
+把這句話發給你的 Agent：
 
 ```text
-用 Archify 画出一个网站的请求流程：浏览器请求 API，
-API 优先读取 Redis，缓存未命中时查询 PostgreSQL 并回填缓存。
+用 Archify 畫出一個網站的請求流程：瀏覽器請求 API，
+API 優先讀取 Redis，緩存未命中時查詢 PostgreSQL 並回填緩存。
 ```
 
-继续说：“添加鉴权步骤”“突出缓存未命中的路径”“切换浅色主题”。
+繼續說：「添加鑑權步驟」「突出緩存未命中的路徑」「切換淺色主題」。
 
-**不需要绑定代码库：**从描述开始即可。也可以让 Agent 阅读仓库，生成有源码依据的架构图。
+**不需要綁定代碼庫：**從描述開始即可。也可以讓 Agent 閱讀倉庫，生成有源碼依據的架構圖。
 
-[按 Agent 选择安装方式](https://tt-a1i.github.io/archify/start.html?agent=cursor&type=architecture) · [安装细节与更新检查](#快速开始)
+[按 Agent 選擇安裝方式](https://tt-a1i.github.io/archify/start.html?agent=cursor&type=architecture) · [安裝細節與更新檢查](#快速開始)
 
-## ❤️ 赞助伙伴
+## ❤️ 贊助夥伴
 
 <table>
 <tr>
   <td align="center" width="240"><a href="https://supercode.sh/?utm_source=archify"><img src="https://cdn.supercode.sh/sponsors/supercode-logo.png" alt="Supercode" width="200"/></a><br/><strong><a href="https://supercode.sh/?utm_source=archify">supercode.sh</a></strong></td>
-  <td><a href="https://supercode.sh/?utm_source=archify">Supercode</a> 赞助 Archify，通过 Token 优化、精选 Skills 和规范驱动开发增强 Codex 与 Cursor。Archify 已入选 <a href="https://supercode.sh/en/skills/tt-a1i/archify/archify">Supercode Editor’s Choice</a> 技能。<br/><br/><a href="https://supercode.sh/en/skills/tt-a1i/archify/archify"><img src="https://supercode.sh/badges/editors-choice.svg" alt="Supercode Editor’s Choice — Archify" width="240" height="55"/></a></td>
+  <td><a href="https://supercode.sh/?utm_source=archify">Supercode</a> 贊助 Archify，通過 Token 優化、精選 Skills 和規範驅動開發增強 Codex 與 Cursor。Archify 已入選 <a href="https://supercode.sh/en/skills/tt-a1i/archify/archify">Supercode Editor’s Choice</a> 技能。<br/><br/><a href="https://supercode.sh/en/skills/tt-a1i/archify/archify"><img src="https://supercode.sh/badges/editors-choice.svg" alt="Supercode Editor’s Choice — Archify" width="240" height="55"/></a></td>
 </tr>
-<tr><td align="center" width="240"><a href="https://github.com/EverMind-AI/Raven"><img src="docs/assets/sponsors/evermind-archify-raven.png" alt="Archify × Raven" width="200" /></a><br/><strong><a href="https://github.com/EverMind-AI">EverMind</a> · <a href="https://github.com/EverMind-AI/Raven">Raven</a></strong></td><td>感谢 EverMind 赞助 Archify。EverMind 专注 Agent 记忆基础设施，旗下 <a href="https://github.com/EverMind-AI/Raven"><strong>Raven</strong></a> 已支持 Archify Skill，让 Raven 工作流可以直接生成经过验证的交互式系统地图。</td></tr>
+<tr><td align="center" width="240"><a href="https://github.com/EverMind-AI/Raven"><img src="docs/assets/sponsors/evermind-archify-raven.png" alt="Archify × Raven" width="200" /></a><br/><strong><a href="https://github.com/EverMind-AI">EverMind</a> · <a href="https://github.com/EverMind-AI/Raven">Raven</a></strong></td><td>感謝 EverMind 贊助 Archify。EverMind 專注 Agent 記憶基礎設施，旗下 <a href="https://github.com/EverMind-AI/Raven"><strong>Raven</strong></a> 已支持 Archify Skill，讓 Raven 工作流可以直接生成經過驗證的交互式系統地圖。</td></tr>
 </table>
 
-> 想赞助 Archify？[欢迎通过邮件联系我们。](mailto:2801884530@qq.com)
+> 想贊助 Archify？[歡迎通過郵件聯繫我們。](mailto:2801884530@qq.com)
 
-## 用图把事情讲明白
+## 用圖把事情講明白
 
-| 讲清 Agent 如何调用工具 | 跟随一次缓存回源请求 | 看清服务与数据库的关系 |
+| 講清 Agent 如何調用工具 | 跟隨一次緩存回源請求 | 看清服務與資料庫的關係 |
 |---|---|---|
-| [![Agent 工作流正在播放一个作者章节](docs/assets/archify-demo-story.png)](https://tt-a1i.github.io/archify/gallery/artifacts/agent-tool-call.workflow.html?theme=dark&present=1&play=1#view=happy-path) | [![缓存未命中时从 Web App 到 Postgres 的路径](docs/assets/archify-demo-route.png)](https://tt-a1i.github.io/archify/gallery/artifacts/cache-miss.sequence.html?theme=dark&present=1#route=web~db) | [![生产架构中后端与数据库角色的真实关系](docs/assets/archify-demo-lens.png)](https://tt-a1i.github.io/archify/gallery/artifacts/production-deployment.architecture.html?theme=dark&present=1#lens=backend~database) |
-| 按章节讲解图中定义的步骤。 | 点亮 Web App 到数据库的路径。 | 聚焦后端与数据库之间已定义的连接。 |
+| [![Agent 工作流正在播放一個作者章節](docs/assets/archify-demo-story.png)](https://tt-a1i.github.io/archify/gallery/artifacts/agent-tool-call.workflow.html?theme=dark&present=1&play=1#view=happy-path) | [![緩存未命中時從 Web App 到 Postgres 的路徑](docs/assets/archify-demo-route.png)](https://tt-a1i.github.io/archify/gallery/artifacts/cache-miss.sequence.html?theme=dark&present=1#route=web~db) | [![生產架構中後端與資料庫角色的真實關係](docs/assets/archify-demo-lens.png)](https://tt-a1i.github.io/archify/gallery/artifacts/production-deployment.architecture.html?theme=dark&present=1#lens=backend~database) |
+| 按章節講解圖中定義的步驟。 | 點亮 Web App 到資料庫的路徑。 | 聚焦後端與資料庫之間已定義的連接。 |
 
-[Proof Lab](https://tt-a1i.github.io/archify/gallery.html) 收录全部 11 个仓库内场景、JSON 源、命名视图和校验回执。
+[Proof Lab](https://tt-a1i.github.io/archify/gallery.html) 收錄全部 11 個倉庫內場景、JSON 源、命名視圖和校驗回執。
 
-### 看懂一个真实代码仓库
+### 看懂一個真實代碼倉庫
 
-<sub>CODE → DIAGRAM · 有源码依据的系统地图</sub>
+<sub>CODE → DIAGRAM · 有源碼依據的系統地圖</sub>
 
-[![根据公开仓库 mco-org/mco 生成的 MCO 运行时架构图](docs/assets/mco-runtime-share-card.png)](https://tt-a1i.github.io/archify/cases/mco-runtime.architecture.html?theme=dark&present=1#view=dispatch-path)
+[![根據公開倉庫 mco-org/mco 生成的 MCO 運行時架構圖](docs/assets/mco-runtime-share-card.png)](https://tt-a1i.github.io/archify/cases/mco-runtime.architecture.html?theme=dark&present=1#view=dispatch-path)
 
-Archify 追踪 [`mco-org/mco`](https://github.com/mco-org/mco) 的 `9f1a1cf` 版本并生成这张校验地图。**[打开成品 ↗](https://tt-a1i.github.io/archify/cases/mco-runtime.architecture.html?theme=dark&present=1#view=dispatch-path)** · [追踪下游 ↗](https://tt-a1i.github.io/archify/cases/mco-runtime.architecture.html?theme=dark#focus=router&reach=downstream) · [Typed Source](docs/cases/mco-runtime.architecture.json)
+Archify 追蹤 [`mco-org/mco`](https://github.com/mco-org/mco) 的 `9f1a1cf` 版本並生成這張校驗地圖。**[打開成品 ↗](https://tt-a1i.github.io/archify/cases/mco-runtime.architecture.html?theme=dark&present=1#view=dispatch-path)** · [追蹤下遊 ↗](https://tt-a1i.github.io/archify/cases/mco-runtime.architecture.html?theme=dark#focus=router&reach=downstream) · [Typed Source](docs/cases/mco-runtime.architecture.json)
 
-### 易于扩展，社区还在不断创造新用法
+### 易於擴展，社區還在不斷創造新用法
 
-<sub>COMMUNITY STORIES · 社区用户提供的部分案例</sub>
+<sub>COMMUNITY STORIES · 社區用戶提供的部分案例</sub>
 
-**生成之后，还可以继续创造。** Archify 开源，成品是独立 HTML，你可以让 Agent 在此基础上继续修改、接入链接、扩展交互，做出适合自己场景的作品。社区已经把它用到了团队协作、旅行规划、法律核验、合同审查和故障复盘；下面只是其中一部分。
+**生成之後，還可以繼續創造。** Archify 開源，成品是獨立 HTML，你可以讓 Agent 在此基礎上繼續修改、接入連結、擴展交互，做出適合自己場景的作品。社區已經把它用到了團隊協作、旅行規劃、法律核驗、合同審查和故障復盤；下面只是其中一部分。
 
-一位用户从纸上手绘的多智能体架构开始，让 Agent 生成交互图，再通过对话加入 Kimi 执行池。另一些用户让 Agent 阅读项目，把生成的架构图带进飞书或钉钉，继续和团队讨论。
+一位用戶從紙上手繪的多智能體架構開始，讓 Agent 生成交互圖，再通過對話加入 Kimi 執行池。另一些用戶讓 Agent 閱讀項目，把生成的架構圖帶進飛書或釘釘，繼續和團隊討論。
 
-还有用户把上海 CityWalk 攻略整理成了四天行程图：按天切换路线，点击节点查看地点信息，并跳转高德地图、小红书和大众点评。作者还扩展了到达打卡和停留记录，让一张路线图变成旅途中可以实际使用的小工具。这些扩展由社区作者为该作品添加。
+還有用戶把上海 CityWalk 攻略整理成了四天行程圖：按天切換路線，點擊節點查看地點信息，並跳轉高德地圖、小紅書和大眾點評。作者還擴展了到達打卡和停留記錄，讓一張路線圖變成旅途中可以實際使用的小工具。這些擴展由社區作者為該作品添加。
 
-**[▶ 点击体验上海 CityWalk 交互版](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)**
+**[▶ 點擊體驗上海 CityWalk 交互版](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)**
 
-[![社区用户创作的上海 CityWalk 四天行程图](docs/assets/community/shanghai-citywalk.png)](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)
+[![社區用戶創作的上海 CityWalk 四天行程圖](docs/assets/community/shanghai-citywalk.png)](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)
 
-**[▶ 点击体验交互版](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)** · 切换 D1–D4 行程，点击地点查看详情。
+**[▶ 點擊體驗交互版](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)** · 切換 D1–D4 行程，點擊地點查看詳情。
 
-<sub>社区作品 · 上海 CityWalk · 四天行程与地点链接</sub>
+<sub>社區作品 · 上海 CityWalk · 四天行程與地點連結</sub>
 
-### 下载下来，亲手点一点
+### 下載下來，親手點一點
 
-成品是一个独立的 HTML 文件。下载后用浏览器打开，即可使用该作品包含的节点详情、路径探索和章节演示，无需安装 Archify。把 HTML 文件发给别人，交互也会一起保留；外部网站和地图链接需要网络。
+成品是一個獨立的 HTML 文件。下載後用瀏覽器打開，即可使用該作品包含的節點詳情、路徑探索和章節演示，無需安裝 Archify。把 HTML 文件發給別人，交互也會一起保留；外部網站和地圖連結需要網絡。
 
-**[打开上海 CityWalk 交互版 ↗](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)** · **[下载 HTML ↓](https://github.com/tt-a1i/archify/raw/refs/heads/main/docs/cases/community/shanghai-citywalk.html)**
+**[打開上海 CityWalk 交互版 ↗](https://tt-a1i.github.io/archify/cases/community/shanghai-citywalk.html)** · **[下載 HTML ↓](https://github.com/tt-a1i/archify/raw/refs/heads/main/docs/cases/community/shanghai-citywalk.html)**
 
-<sub>试试切换 D1–D4、点击地点卡片，或打开地图链接。行程中的时间和地点信息为作者创作时的记录。</sub>
+<sub>試試切換 D1–D4、點擊地點卡片，或打開地圖連結。行程中的時間和地點信息為作者創作時的記錄。</sub>
 
-## 社区与关注
+## 社區與關注
 
-- **GitHub Trending 全球仓库周榜第一。** [作者于 2026 年 9 月 1 日发布的榜单截图](https://x.com/t20000622yy/status/2094656813576880285)，筛选为所有语言、This week。
-- **量子位报道与人物采访。** [项目报道](https://www.qbitai.com/2026/09/482469.html) · [开发者故事](https://www.qbitai.com/2026/09/488519.html)。
-- **开发者社区推荐。** [midudev 分享](https://x.com/midudev/status/2094425974406320207)。
+- **GitHub Trending 全球倉庫周榜第一。** [作者於 2026 年 9 月 1 日發布的榜單截圖](https://x.com/t20000622yy/status/2094656813576880285)，篩選為所有語言、This week。
+- **量子位報導與人物採訪。** [項目報導](https://www.qbitai.com/2026/09/482469.html) · [開發者故事](https://www.qbitai.com/2026/09/488519.html)。
+- **開發者社區推薦。** [midudev 分享](https://x.com/midudev/status/2094425974406320207)。
 
-<sub>这里选列部分公开报道、分享与历史里程碑；排名日期及来源见链接。</sub>
+<sub>這裡選列部分公開報導、分享與歷史裡程碑；排名日期及來源見連結。</sub>
 
-## 预览
+## 預覽
 
 <details>
-<summary>深浅主题、导出菜单与分享卡片</summary>
+<summary>深淺主題、導出菜單與分享卡片</summary>
 
 <p align="center"><img src="docs/assets/archify-readme-hero.png" alt="Archify — interactive diagrams" width="960" /></p>
 
-同一张图，两套主题，一键切换：
+同一張圖，兩套主題，一鍵切換：
 
-| 深色 | 浅色 |
+| 深色 | 淺色 |
 |---|---|
-| ![深色主题](docs/assets/archify-dark.png) | ![浅色主题](docs/assets/archify-light.png) |
+| ![深色主題](docs/assets/archify-dark.png) | ![淺色主題](docs/assets/archify-light.png) |
 
-Export 菜单支持复制 PNG，并下载静态或动态格式：
+Export 菜單支持複製 PNG，並下載靜態或動態格式：
 
-![导出菜单](docs/assets/archify-menu.png)
+![導出菜單](docs/assets/archify-menu.png)
 
-需要用于 README、Release 或社交平台的标准 1200×630 图片时，使用 **Copy Share Card**。
+需要用於 README、Release 或社交平臺的標準 1200×630 圖片時，使用 **Copy Share Card**。
 
-路径解析后，**Export → Route Share Card** 会把真实路径下载为 1200×630 PNG，并保留完整拓扑上下文。
+路徑解析後，**Export → Route Share Card** 會把真實路徑下載為 1200×630 PNG，並保留完整拓撲上下文。
 
-![Route Share Card：突出 Users 到 API Server 的精确路径，同时保留完整架构作为上下文](docs/assets/archify-route-share-card.png)
+![Route Share Card：突出 Users 到 API Server 的精確路徑，同時保留完整架構作為上下文](docs/assets/archify-route-share-card.png)
 
-完成 authored `Upstream` 或 `Downstream` reach 后，**Export → Reach Share Card** 会捕获这次阅读结果，但不冒充运行时影响分析。
+完成 authored `Upstream` 或 `Downstream` reach 後，**Export → Reach Share Card** 會捕獲這次閱讀結果，但不冒充運行時影響分析。
 
-![MCO downstream Reach Share Card：展示从 Command Router 出发的已创作关系](docs/assets/mco-runtime-reach-share-card.png)
+![MCO downstream Reach Share Card：展示從 Command Router 出發的已創作關係](docs/assets/mco-runtime-reach-share-card.png)
 
-在本地打开 [`examples/web-app.html`](examples/web-app.html)，即可体验完整 Viewer。
+在本地打開 [`examples/web-app.html`](examples/web-app.html)，即可體驗完整 Viewer。
 
 </details>
 
-## 快速开始
+## 快速開始
 
-**当前开发版本：** `v2.17.0-dev.1`。详见[版本历史](CHANGELOG.md#unreleased)。
+**當前開發版本：** `v2.17.0-dev.1`。詳見[版本歷史](CHANGELOG.md#unreleased)。
 
-### 1. 安装
+### 1. 安裝
 
 ```bash
 npx skills add tt-a1i/archify -g
 ```
 
 <details>
-<summary>更多安装方式与更新检查说明</summary>
+<summary>更多安裝方式與更新檢查說明</summary>
 
-显式、非交互地安装到 Cursor：
+顯式、非交互地安裝到 Cursor：
 
 ```bash
 npx -y skills add tt-a1i/archify --skill archify --agent cursor --global --copy --yes
 ```
 
-如果只想临时体验：
+如果只想臨時體驗：
 
 ```bash
 npx skills use tt-a1i/archify@archify --agent codex
 ```
 
-DeepSeek Harness（社区集成、显式启用）：运行 `dsh plugin --profile web add @tt-a1i/archify-dsh@0.1.0`；参见[兼容范围、限制与安全说明](integrations/deepseek-harness/README.md)。[Agent 切换器](https://tt-a1i.github.io/archify/start.html?agent=cursor&type=architecture)只为 `cursor`、`codex`、`claude-code` 和 `opencode` 生成命令。Raven 仅支持 ZIP 手动安装：将 [`archify.zip`](archify.zip) 解压到 `~/.raven/workspace/skills`，解压后会得到 `~/.raven/workspace/skills/archify`；Raven 不属于切换器目标。
+DeepSeek Harness（社區集成、顯式啟用）：運行 `dsh plugin --profile web add @tt-a1i/archify-dsh@0.1.0`；參見[兼容範圍、限制與安全說明](integrations/deepseek-harness/README.md)。[Agent 切換器](https://tt-a1i.github.io/archify/start.html?agent=cursor&type=architecture)只為 `cursor`、`codex`、`claude-code` 和 `opencode` 生成命令。Raven 僅支持 ZIP 手動安裝：將 [`archify.zip`](archify.zip) 解壓到 `~/.raven/workspace/skills`，解壓後會得到 `~/.raven/workspace/skills/archify`；Raven 不屬於切換器目標。
 
-安装后的 Skill 包含一个低频、失败静默的发布检查，它最多只显示可选更新提醒，绝不会自行下载或安装更新。一次成功检查后，下次网络请求通常约在 72 小时（±20%）后发出；检查失败后，活跃使用可能在首次 6 小时、后续 24 小时退避到期时重试。请求只访问 `https://tt-a1i.github.io/archify/skill-updates/archify/stable.json`。服务端会自然获得 IP、请求时间和常规 HTTP 元数据；检查器不会发送本地版本、Agent、项目数据、用户输入、账户/设备标识，也不会保存或回传 ETag。是否更新以及何时更新始终由你决定。如需完全关闭检查（包括网络请求和提醒状态写入），请在 Agent 环境中设置 `ARCHIFY_UPDATE_CHECK_DISABLED=1`。
+安裝後的 Skill 包含一個低頻、失敗靜默的發布檢查，它最多只顯示可選更新提醒，絕不會自行下載或安裝更新。一次成功檢查後，下次網絡請求通常約在 72 小時（±20%）後發出；檢查失敗後，活躍使用可能在首次 6 小時、後續 24 小時退避到期時重試。請求只訪問 `https://tt-a1i.github.io/archify/skill-updates/archify/stable.json`。服務端會自然獲得 IP、請求時間和常規 HTTP 元數據；檢查器不會發送本地版本、Agent、項目數據、用戶輸入、帳戶/設備標識，也不會保存或回傳 ETag。是否更新以及何時更新始終由你決定。如需完全關閉檢查（包括網絡請求和提醒狀態寫入），請在 Agent 環境中設置 `ARCHIFY_UPDATE_CHECK_DISABLED=1`。
 
 </details>
 
-### 2. 直接从描述开始——不需要代码库
+### 2. 直接從描述開始——不需要代碼庫
 
 ```text
-用 Archify 画出：Browser -> API -> Redis 缓存 -> PostgreSQL 回源。
+用 Archify 畫出：Browser -> API -> Redis 緩存 -> PostgreSQL 回源。
 ```
 
-需要源码证据时，打开仓库后改用：
+需要源碼證據時，打開倉庫後改用：
 
 ```text
-分析这个仓库，然后使用 archify 生成一张高层运行时架构图。
-只保留 8–12 个核心组件，突出一条主要路径，并标出外部依赖与信任边界。
-辅助信息放进说明卡片，不要继续增加连线。
+分析這個倉庫，然後使用 archify 生成一張高層運行時架構圖。
+只保留 8–12 個核心組件，突出一條主要路徑，並標出外部依賴與信任邊界。
+輔助信息放進說明卡片，不要繼續增加連線。
 ```
 
-### 3. 在对话中细调
+### 3. 在對話中細調
 
-继续说：`增加 Redis`、`把鉴权移到左侧`、`突出回滚路径`。Archify 会保留 Typed Source，只修改相关部分。
+繼續說：`增加 Redis`、`把鑑權移到左側`、`突出回滾路徑`。Archify 會保留 Typed Source，只修改相關部分。
 
-## 选择合适的图表
+## 選擇合適的圖表
 
 <details>
-<summary>五种图表、架构差异对比与示例</summary>
+<summary>五種圖表、架構差異對比與示例</summary>
 
 
-| 类型 | 最适合 | Prompt 中应包含 |
+| 類型 | 最適合 | Prompt 中應包含 |
 |---|---|---|
-| **Architecture** | 组件、服务、存储和系统边界 | 范围、核心组件、主要路径 |
-| **Workflow** | CI/CD、审批、工具调用、Runbook | 参与者、顺序、分支、异常 |
-| **Sequence** | API 调用、缓存回源、鉴权、异步链路 | 调用方、被调用方、返回、时序 |
-| **Data Flow** | 数据管线、血缘、PII、下游消费者 | 来源、转换、存储、边界 |
-| **Lifecycle** | 状态、重试、等待、终态 | 状态、事件、重试与取消路径 |
+| **Architecture** | 組件、服務、存儲和系統邊界 | 範圍、核心組件、主要路徑 |
+| **Workflow** | CI/CD、審批、工具調用、Runbook | 參與者、順序、分支、異常 |
+| **Sequence** | API 調用、緩存回源、鑑權、異步鏈路 | 調用方、被調用方、返回、時序 |
+| **Data Flow** | 數據管線、血緣、PII、下遊消費者 | 來源、轉換、存儲、邊界 |
+| **Lifecycle** | 狀態、重試、等待、終態 | 狀態、事件、重試與取消路徑 |
 
-做生产部署评审时，Architecture 可以按需启用 `deployment-ownership`
-工程画像：负责人、单一区域归属、数据库私有边界或边界穿越机制缺失时会直接阻断。
-它不会被静默开启，只校验作者写入的事实，不代表线上基础设施已经核验。可查看
-[通过校验的部署证明](https://tt-a1i.github.io/archify/gallery.html#proof-deployment-ownership)。
+做生產部署評審時，Architecture 可以按需啟用 `deployment-ownership`
+工程畫像：負責人、單一區域歸屬、資料庫私有邊界或邊界穿越機制缺失時會直接阻斷。
+它不會被靜默開啟，只校驗作者寫入的事實，不代表線上基礎設施已經核驗。可查看
+[通過校驗的部署證明](https://tt-a1i.github.io/archify/gallery.html#proof-deployment-ownership)。
 
-做设计或 PR 评审时，Architecture Delta 生成已校验的 Before / Delta / After 和机器回执。精确选择任一作者变更，或播放一次有限 Review；全程只读，不推断影响、风险或合并安全。
+做設計或 PR 評審時，Architecture Delta 生成已校驗的 Before / Delta / After 和機器回執。精確選擇任一作者變更，或播放一次有限 Review；全程只讀，不推斷影響、風險或合併安全。
 
 `node archify/bin/archify.mjs compare architecture base.json head.json architecture-delta.html --json`
 
-[![Architecture Delta：展示作者明确写出的新增、删除、变化和移动](docs/assets/architecture-delta-proof.jpg)](examples/checkout-platform-delta.html)
+[![Architecture Delta：展示作者明確寫出的新增、刪除、變化和移動](docs/assets/architecture-delta-proof.jpg)](examples/checkout-platform-delta.html)
 
-不知道选哪一种？打开[交互式场景指南](https://tt-a1i.github.io/archify/guide.html)，或直接询问零依赖 CLI：
+不知道選哪一種？打開[交互式場景指南](https://tt-a1i.github.io/archify/guide.html)，或直接詢問零依賴 CLI：
 
 ```bash
-node archify/bin/archify.mjs guide "展示带 Redis 缓存未命中的 API 请求"
-node archify/bin/archify.mjs guide "梳理 Kafka Topic、消费者组、重放和死信队列" --json
+node archify/bin/archify.mjs guide "展示帶 Redis 緩存未命中的 API 請求"
+node archify/bin/archify.mjs guide "梳理 Kafka Topic、消費者組、重放和死信隊列" --json
 ```
 
-Workflow 用泳道保持主路径清晰：
+Workflow 用泳道保持主路徑清晰：
 
 ![Workflow 示例](docs/assets/archify-workflow.png)
 
-Sequence 解释一次交互随时间如何推进：
+Sequence 解釋一次交互隨時間如何推進：
 
 ![Sequence 示例](docs/assets/archify-sequence.png)
 
-Data Flow 突出数据移动和敏感边界：
+Data Flow 突出數據移動和敏感邊界：
 
 ![Data Flow 示例](docs/assets/archify-dataflow.png)
 
-Lifecycle 区分正常进展、等待、重试和终态：
+Lifecycle 區分正常進展、等待、重試和終態：
 
 ![Lifecycle 示例](docs/assets/archify-lifecycle.png)
 
@@ -265,147 +265,147 @@ Architecture 示例：[`Web App`](examples/web-app.html) · [`Archify Pipeline`]
 
 </details>
 
-## 为什么用 Archify
+## 為什麼用 Archify
 
-| 读懂结构 | 边看边讲 |
+| 讀懂結構 | 邊看邊講 |
 |---|---|
-| 从代码或描述出发，整理关键组件、流程和关系。 | 点击节点、追踪路径、按章节展开复杂流程。 |
-| **易于扩展** | **方便交付** |
-| 保留可编辑源文件，也可基于开源代码和 HTML 成品扩展自己的交互与用途。 | 分享独立 HTML，或导出图片、视频与分享卡片。 |
+| 從代碼或描述出發，整理關鍵組件、流程和關係。 | 點擊節點、追蹤路徑、按章節展開複雜流程。 |
+| **易於擴展** | **方便交付** |
+| 保留可編輯源文件，也可基於開原始碼和 HTML 成品擴展自己的交互與用途。 | 分享獨立 HTML，或導出圖片、視頻與分享卡片。 |
 
 <details>
-<summary>这些体验背后的工程能力</summary>
+<summary>這些體驗背後的工程能力</summary>
 
 
-- **用布局判断代替通用自动布局** —— Agent 根据故事选择层级、留白、线路和强调关系；共享的自动端点会确定性展开，不再让多支箭头堆在同一个中点。
-- **Typed JSON IR** —— 每种 Renderer 模式都有 Schema 和可复现的源文件。
-- **原子交付前校验** —— Schema、布局、HTML/SVG、线路和标签到其他路径的净空检查必须全部通过，Showcase 成品才会替换上一份可信结果。
-- **失败也有结构化修复回执** —— `validate --json` 和 `deliver --json` 会返回稳定规则码、准确对象、测量证据和真正支持的修复旋钮，不再让 Agent 从 Node 堆栈或自由文本里猜。
-- **保留最后好图的实时预览** —— 可选桌面循环只监听一个 JSON；只有最新候选通过全部门禁才刷新，半写入或无效保存时继续显示上一份验证成品。
-- **交互不编造拓扑** —— 聚焦、上下游可达范围、精确路径、角色对比和故事都复用作者定义的节点与关系，也不把图上可达误报成真实运行时影响。
-- **只在需要时附源码证据** —— 有证据的 Architecture 节点会显示 `SRC n`，并可打开由 Git 校验、固定到公开 commit 的文件与行号；普通成品不携带源码信息。
-- **结果默认便携** —— 一个 HTML 文件即可分享；导出永远是完整原图，不携带临时 Viewer 状态。
+- **用布局判斷代替通用自動布局** —— Agent 根據故事選擇層級、留白、線路和強調關係；共享的自動端點會確定性展開，不再讓多支箭頭堆在同一個中點。
+- **Typed JSON IR** —— 每種 Renderer 模式都有 Schema 和可復現的源文件。
+- **原子交付前校驗** —— Schema、布局、HTML/SVG、線路和標籤到其他路徑的淨空檢查必須全部通過，Showcase 成品才會替換上一份可信結果。
+- **失敗也有結構化修復回執** —— `validate --json` 和 `deliver --json` 會返回穩定規則碼、準確對象、測量證據和真正支持的修復旋鈕，不再讓 Agent 從 Node 堆棧或自由文本裡猜。
+- **保留最後好圖的實時預覽** —— 可選桌面循環只監聽一個 JSON；只有最新候選通過全部門禁才刷新，半寫入或無效保存時繼續顯示上一份驗證成品。
+- **交互不編造拓撲** —— 聚焦、上下遊可達範圍、精確路徑、角色對比和故事都復用作者定義的節點與關係，也不把圖上可達誤報成真實運行時影響。
+- **只在需要時附源碼證據** —— 有證據的 Architecture 節點會顯示 `SRC n`，並可打開由 Git 校驗、固定到公開 commit 的文件與行號；普通成品不攜帶源碼信息。
+- **結果默認便攜** —— 一個 HTML 文件即可分享；導出永遠是完整原圖，不攜帶臨時 Viewer 狀態。
 
-Archify 不是通用绘图编辑器，也不是 Mermaid 主题；它负责把技术意图变成可交流的成品。
+Archify 不是通用繪圖編輯器，也不是 Mermaid 主題；它負責把技術意圖變成可交流的成品。
 
 </details>
 
 ## 工作原理
 
 <details>
-<summary>生成、校验、预览与交付的技术细节</summary>
+<summary>生成、校驗、預覽與交付的技術細節</summary>
 
-| 步骤 | 发生什么 |
+| 步驟 | 發生什麼 |
 |---|---|
-| **生成** | Agent 根据描述创建 Typed JSON IR。 |
-| **校验** | 内置 Validator 和布局规则检查源文件；失败时用机器可读 JSON 指出准确的局部修复。 |
-| **预览（可选）** | 仅 loopback 的桌面会话监听一个源文件，只刷新验证版本；失败时保留最后好图。 |
-| **交付** | 在目标同目录生成并检查候选；只有通过门禁的结果才原子替换目标文件，随后可选用 `--open` 打开这个确切成品。 |
-| **迭代** | Agent 修改源文件，不干扰无关结构。 |
+| **生成** | Agent 根據描述創建 Typed JSON IR。 |
+| **校驗** | 內置 Validator 和布局規則檢查源文件；失敗時用機器可讀 JSON 指出準確的局部修復。 |
+| **預覽（可選）** | 僅 loopback 的桌面會話監聽一個源文件，只刷新驗證版本；失敗時保留最後好圖。 |
+| **交付** | 在目標同目錄生成並檢查候選；只有通過門禁的結果才原子替換目標文件，隨後可選用 `--open` 打開這個確切成品。 |
+| **迭代** | Agent 修改源文件，不幹擾無關結構。 |
 
-仓库常用命令：
+倉庫常用命令：
 
 ```bash
 cd archify
 node bin/archify.mjs doctor
 node bin/archify.mjs demo /tmp/archify-demo
-node bin/archify.mjs guide "展示 CI/CD 检查、审批、部署和回滚"
+node bin/archify.mjs guide "展示 CI/CD 檢查、審批、部署和回滾"
 node bin/archify.mjs validate workflow examples/agent-tool-call.workflow.json --quality showcase --json
 node bin/archify.mjs preview workflow examples/agent-tool-call.workflow.json /tmp/workflow.html --quality showcase
 node bin/archify.mjs deliver workflow examples/agent-tool-call.workflow.json /tmp/workflow.html --quality showcase --open --json
 ```
 
-`preview` 是显式启用的桌面创作模式，不是默认后台服务：它只在随机端口监听 `127.0.0.1`，只观察指定 JSON，失败时保留上一份验证输出，并通过 Ctrl-C 停止。测试或准备手动打开打印出的本地 URL 时可加 `--no-open`。生成的 HTML 不会携带 Preview Runtime。
+`preview` 是顯式啟用的桌面創作模式，不是默認後臺服務：它只在隨機埠監聽 `127.0.0.1`，只觀察指定 JSON，失敗時保留上一份驗證輸出，並通過 Ctrl-C 停止。測試或準備手動打開列印出的本地 URL 時可加 `--no-open`。生成的 HTML 不會攜帶 Preview Runtime。
 
-`deliver --open` 适合一次性的本地交互交付。它默认关闭，并且只在验证成品原子提交后执行；系统无法打开时，交付仍保持成功，JSON 只写 stdout，stderr 会给出可手动打开的绝对路径。
+`deliver --open` 適合一次性的本地交互交付。它默認關閉，並且只在驗證成品原子提交後執行；系統無法打開時，交付仍保持成功，JSON 只寫 stdout，stderr 會給出可手動打開的絕對路徑。
 
-失败时，`validate --json` 和 `deliver --json` 仍然只输出一个 JSON 对象。读取 `diagnostics[]`，只修改其中 `subject` 指向的对象，并使用 `supportedFixes` 列出的修复方式；不要整图重写，也不要突破 Skill 最多两轮的聚焦修复上限。确定性诊断仍不等于视觉复核。
+失敗時，`validate --json` 和 `deliver --json` 仍然只輸出一個 JSON 對象。讀取 `diagnostics[]`，只修改其中 `subject` 指向的對象，並使用 `supportedFixes` 列出的修複方式；不要整圖重寫，也不要突破 Skill 最多兩輪的聚焦修復上限。確定性診斷仍不等於視覺覆核。
 
-动态和演示样式需要显式选择：
+動態和演示樣式需要顯式選擇：
 
 ```json
 {
   "meta": {
-    "locale": "zh-CN",
+    "locale": "zh-TW",
     "animation": "trace",
     "visual_preset": "signal-flow"
   }
 }
 ```
 
-不设置 `animation` 时结果完全静态；`classic` 始终是默认视觉预设。设计评审、发布说明和技术文档可以显式选择 `editorial`，获得暖纸张与深墨色的编辑风格，同时保持几何完全不变。将 `meta.locale` 设为 `en` 或 `zh-CN`，可选择 `<html lang>`、默认图例、无障碍文案和所有固定 Viewer UI。作者编写的标题、节点、关系、章节和卡片不会被机器翻译。未带该字段的旧文件仍然有效，并默认使用英文。对于其他任何创作语言，应省略 `meta.locale`、保持 authored content 使用用户要求的语言，并主动告知用户固定 Viewer UI 与 `<html lang>` 回退为英文，因此该成品不属于完整本地化。
+不設置 `animation` 時結果完全靜態；`classic` 始終是默認視覺預設。設計評審、發布說明和技術文檔可以顯式選擇 `editorial`，獲得暖紙張與深墨色的編輯風格，同時保持幾何完全不變。將 `meta.locale` 設為 `en` 或 `zh-TW`，可選擇 `<html lang>`、默認圖例、無障礙文案和所有固定 Viewer UI。作者編寫的標題、節點、關係、章節和卡片不會被機器翻譯。未帶該欄位的舊文件仍然有效，並默認使用英文。對於其他任何創作語言，應省略 `meta.locale`、保持 authored content 使用用戶要求的語言，並主動告知用戶固定 Viewer UI 與 `<html lang>` 回退為英文，因此該成品不屬於完整本地化。
 
 </details>
 
-## 探索与分享
+## 探索與分享
 
 | 操作 | 控制方式 |
 |---|---|
-| 打开事实型 Diagram Guide | <kbd>?</kbd> |
-| 查找并聚焦语义节点 | <kbd>/</kbd> |
-| 追踪作者定义的上游 / 下游可达范围 | 聚焦节点 → `Upstream` / `Downstream` |
-| 探查有向路径并逐站检查 | <kbd>R</kbd> 或“路径” |
-| 对比一种或两种语义角色 | <kbd>L</kbd> 或“透镜” |
-| 打开实时全局雷达 | <kbd>M</kbd> 或“地图” |
-| 播放故事 / 切换章节 | <kbd>P</kbd> / <kbd>[</kbd> <kbd>]</kbd> |
-| 进入 Presentation Stage | <kbd>F</kbd> |
-| 选择视觉风格（<kbd>S</kbd> 循环）/ 切换主题 / 打开 Export | <kbd>S</kbd> / <kbd>T</kbd> / <kbd>E</kbd> |
-| 缩放或复位 | <kbd>+</kbd> / <kbd>-</kbd> / <kbd>0</kbd> |
+| 打開事實型 Diagram Guide | <kbd>?</kbd> |
+| 查找並聚焦語義節點 | <kbd>/</kbd> |
+| 追蹤作者定義的上遊 / 下遊可達範圍 | 聚焦節點 → `Upstream` / `Downstream` |
+| 探查有向路徑並逐站檢查 | <kbd>R</kbd> 或「路徑」 |
+| 對比一種或兩種語義角色 | <kbd>L</kbd> 或「透鏡」 |
+| 打開實時全局雷達 | <kbd>M</kbd> 或「地圖」 |
+| 播放故事 / 切換章節 | <kbd>P</kbd> / <kbd>[</kbd> <kbd>]</kbd> |
+| 進入 Presentation Stage | <kbd>F</kbd> |
+| 選擇視覺風格（<kbd>S</kbd> 循環）/ 切換主題 / 打開 Export | <kbd>S</kbd> / <kbd>T</kbd> / <kbd>E</kbd> |
+| 縮放或復位 | <kbd>+</kbd> / <kbd>-</kbd> / <kbd>0</kbd> |
 
-稳定链接可以恢复 `#focus=<id>`、`#focus=<id>&reach=upstream|downstream`、`#relation=<id>`、`#route=<source>~<target>`、`#lens=<kind>~<kind>` 和 `#view=<view-id>`。读者触发的动态有限运行、遵守 `prefers-reduced-motion`，并且不会进入标准导出。
+穩定連結可以恢復 `#focus=<id>`、`#focus=<id>&reach=upstream|downstream`、`#relation=<id>`、`#route=<source>~<target>`、`#lens=<kind>~<kind>` 和 `#view=<view-id>`。讀者觸發的動態有限運行、遵守 `prefers-reduced-motion`，並且不會進入標準導出。
 
-完整生成与 Viewer 契约请查看 [`archify/SKILL.md`](archify/SKILL.md)。
+完整生成與 Viewer 契約請查看 [`archify/SKILL.md`](archify/SKILL.md)。
 
-## 安装方式
+## 安裝方式
 
-| 使用位置 | 安装位置或方法 | 能力 |
+| 使用位置 | 安裝位置或方法 | 能力 |
 |---|---|---|
-| **Raven** | ZIP 手动安装：将 `archify.zip` 解压到 `~/.raven/workspace/skills`，解压后会得到 `~/.raven/workspace/skills/archify` | 完整 Renderer + Validation 工作流 |
+| **Raven** | ZIP 手動安裝：將 `archify.zip` 解壓到 `~/.raven/workspace/skills`，解壓後會得到 `~/.raven/workspace/skills/archify` | 完整 Renderer + Validation 工作流 |
 | **Claude Code** | `~/.claude/skills/` 或 `.claude/skills/` | 完整 Renderer + Validation 工作流 |
 | **Codex CLI** | `~/.agents/skills/` 或 `.agents/skills/` | 完整 Renderer + Validation 工作流 |
 | **opencode** | `~/.config/opencode/skills/`、`.opencode/skills/` 或 `.agents/skills/` | 完整 Renderer + Validation 工作流 |
-| **Claude.ai** | Settings → Capabilities → Skills 中上传 `archify.zip` | 取决于沙箱是否提供 Node.js |
-| **Project Knowledge** | 把 `archify.zip` 上传到项目 | Prompt 驱动的 Architecture Fallback |
-| **DeepSeek Harness** | 显式启用：`dsh plugin --profile web add @tt-a1i/archify-dsh@0.1.0`；调用：`Use the archify skill to map this repository's runtime architecture.`；卸载：`dsh plugin --profile web remove @tt-a1i/archify-dsh`。 | 面向开发者预览版 `@deepseek-ai/dsh@0.1.0-rc.6` 的社区集成；Node `^22.19.0 \|\| >=24.0.0`；不是 DeepSeek 官方产品。没有遥测；shell 文件不会自动进入 Web Produced Files，请返回精确工作区路径。[详情](integrations/deepseek-harness/README.md)。 |
+| **Claude.ai** | Settings → Capabilities → Skills 中上傳 `archify.zip` | 取決於沙箱是否提供 Node.js |
+| **Project Knowledge** | 把 `archify.zip` 上傳到項目 | Prompt 驅動的 Architecture Fallback |
+| **DeepSeek Harness** | 顯式啟用：`dsh plugin --profile web add @tt-a1i/archify-dsh@0.1.0`；調用：`Use the archify skill to map this repository's runtime architecture.`；卸載：`dsh plugin --profile web remove @tt-a1i/archify-dsh`。 | 面向開發者預覽版 `@deepseek-ai/dsh@0.1.0-rc.6` 的社區集成；Node `^22.19.0 \|\| >=24.0.0`；不是 DeepSeek 官方產品。沒有遙測；shell 文件不會自動進入 Web Produced Files，請返回精確工作區路徑。[詳情](integrations/deepseek-harness/README.md)。 |
 
-## 参考与边界
+## 參考與邊界
 
-- [Schema 说明](archify/schemas/README.md)
-- [Skill 与 Renderer 契约](archify/SKILL.md)
+- [Schema 說明](archify/schemas/README.md)
+- [Skill 與 Renderer 契約](archify/SKILL.md)
 - [示例](archify/examples/)
-- [Agent 编图手册](docs/authoring-cookbook.zh-CN.md) · [English](docs/authoring-cookbook.md)
-- [版本历史](CHANGELOG.md)
-- [路线图](ROADMAP.md)
-- [自动生成的 Proof Lab](https://tt-a1i.github.io/archify/gallery.html)
+- [Agent 編圖手冊](docs/authoring-cookbook.zh-TW.md) · [English](docs/authoring-cookbook.md)
+- [版本歷史](CHANGELOG.md)
+- [路線圖](ROADMAP.md)
+- [自動生成的 Proof Lab](https://tt-a1i.github.io/archify/gallery.html)
 
-自动 Mermaid Parser、通用自动布局、托管分享服务和 WYSIWYG 编辑器目前都不在产品范围内。
+自動 Mermaid Parser、通用自動布局、託管分享服務和 WYSIWYG 編輯器目前都不在產品範圍內。
 
-## 社区交流
+## 社區交流
 
-👋 **欢迎加入 Archify 社区！**
+👋 **歡迎加入 Archify 社區！**
 
-与其他用户和开发者交流、分享想法、提出功能建议、报告问题、讨论开发，并一起让 Archify 变得更好。
+與其他用戶和開發者交流、分享想法、提出功能建議、報告問題、討論開發，並一起讓 Archify 變得更好。
 
 - <img src="docs/assets/community/discord.svg" alt="" width="18" /> [加入 Discord](https://discord.gg/6xWMjgCeUq)
-- <img src="docs/assets/community/wechat.svg" alt="" width="18" /> 微信群：扫描下方二维码。微信群二维码会定期失效；如二维码已过期，请通过 Discord 或 QQ 联系管理员获取最新二维码。
+- <img src="docs/assets/community/wechat.svg" alt="" width="18" /> 微信群：掃描下方二維碼。微信群二維碼會定期失效；如二維碼已過期，請通過 Discord 或 QQ 聯繫管理員獲取最新二維碼。
 - <img src="docs/assets/community/qq.svg" alt="" width="18" /> QQ 群：`1121948602`
 
 <table>
 <tr>
-  <td align="center"><strong><img src="docs/assets/community/wechat.svg" alt="" width="18" /> 微信群</strong><br/><img src="docs/assets/community/wechat-qr.png" alt="Archify Official 微信群二维码" width="300" height="300" /></td>
-  <td align="center"><strong><img src="docs/assets/community/qq.svg" alt="" width="18" /> QQ 群</strong><br/><img src="docs/assets/community/qq-qr.png" alt="Archify Official QQ 群二维码" width="300" height="300" /></td>
+  <td align="center"><strong><img src="docs/assets/community/wechat.svg" alt="" width="18" /> 微信群</strong><br/><img src="docs/assets/community/wechat-qr.png" alt="Archify Official 微信群二維碼" width="300" height="300" /></td>
+  <td align="center"><strong><img src="docs/assets/community/qq.svg" alt="" width="18" /> QQ 群</strong><br/><img src="docs/assets/community/qq-qr.png" alt="Archify Official QQ 群二維碼" width="300" height="300" /></td>
 </tr>
 </table>
 
 ## License
 
-[MIT](LICENSE) —— 可以自由使用、修改和分发。
+[MIT](LICENSE) —— 可以自由使用、修改和分發。
 
-## 参与贡献
+## 參與貢獻
 
-欢迎提交 Issue、Pull Request 和真实场景图。请先阅读[贡献指南](CONTRIBUTING.md)；遇到问题时使用可复现 Bug 表单，也可以通过[社区 Showcase 表单](https://github.com/tt-a1i/archify/issues/new?template=showcase.yml)提交已验证成品。
+歡迎提交 Issue、Pull Request 和真實場景圖。請先閱讀[貢獻指南](CONTRIBUTING.md)；遇到問題時使用可復現 Bug 表單，也可以通過[社區 Showcase 表單](https://github.com/tt-a1i/archify/issues/new?template=showcase.yml)提交已驗證成品。
 
-较大的功能或行为调整请先通过 Issue 对齐价值、兼容边界和非目标，再基于最新 `main` 开发。一个 PR 尽量只解决一个问题；核心代码和回归测试先行，生成物最后统一重建。Archify 坚持 Agent-first，优先完善稳定的机器可读诊断和现有权威合同，避免新增容易与 CLI 漂移的重复说明。&nbsp;·&nbsp;[LINUX&nbsp;DO](https://linux.do)
+較大的功能或行為調整請先通過 Issue 對齊價值、兼容邊界和非目標，再基於最新 `main` 開發。一個 PR 儘量只解決一個問題；核心代碼和回歸測試先行，生成物最後統一重建。Archify 堅持 Agent-first，優先完善穩定的機器可讀診斷和現有權威合同，避免新增容易與 CLI 漂移的重複說明。&nbsp;·&nbsp;[LINUX&nbsp;DO](https://linux.do)
 
 ## Star History
 

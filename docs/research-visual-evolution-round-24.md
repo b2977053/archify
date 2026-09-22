@@ -4,7 +4,7 @@ Research date: 2026-07-19 (Asia/Shanghai)
 
 ## Product question
 
-Reading Depth now answers “how much detail should I see at this zoom?” The next
+Reading Depth now answers 「how much detail should I see at this zoom?」 The next
 unanswered reader question is categorical rather than spatial:
 
 > Where are the security, database, backend, waiting, or failure elements, and
@@ -69,7 +69,7 @@ is needed.
 [Linkurious' Filter panel](https://doc.linkurious.com/user-manual/latest/filter-panel/)
 lists detected node categories and edge types with counts, category selection,
 visibility toggles, an Applied Filters area, and Reset Filters. Notably, elements
-described as “hidden” remain light grey in the visualization. That preserves the
+described as 「hidden」 remain light grey in the visualization. That preserves the
 reader's mental map while making the active slice unmistakable.
 
 The useful lesson is smaller than the product: show exact counts, keep the active
@@ -115,7 +115,7 @@ one graph and one geometry.
 ## Recommended interaction contract
 
 1. Add one compact `LENS` viewer control and <kbd>L</kbd> shortcut. The existing
-   Diagram Guide should expose it as “Compare semantic kinds.” Do not open it on
+   Diagram Guide should expose it as 「Compare semantic kinds.」 Do not open it on
    first load.
 2. Derive one chip per distinct `data-node-kind`, in deterministic count-descending
    then label order. Each chip shows the existing semantic swatch, a human-readable
